@@ -1,0 +1,57 @@
+.articles
+    background-color: $color6
+
+    h2
+        text-align: center
+
+        @include breakpoint-up(large)
+            text-align: left
+            margin-bottom: 2.8125rem
+
+    &__grid
+        display: grid
+        grid-template-columns: 1fr
+        row-gap: 1.875rem
+
+        @include breakpoint-up(medium)
+            grid-template-columns: repeat(2,1fr)
+            column-gap: 1.875rem
+
+        @include breakpoint-up(large)
+            grid-template-columns: repeat(4,1fr)
+
+    &__item
+        color: $color4
+        box-shadow: 3px 0px 10px $color5
+        border-radius: 0.3125rem
+        overflow: hidden
+        cursor: pointer
+        transition: transform 50ms ease-in-out
+
+        &:hover
+            transform: scale(1.03)
+
+            .articles__textbox__title
+                color: $color2
+
+    &__image
+        height: 12.5rem
+        background-position: center center
+        background-size: cover
+        background-repeat: no-repeat
+
+    &__textbox
+        padding: 1.875rem 1.875rem 2.5rem
+        background-color: $color7
+
+        &__author
+            display: block
+            font-size: $font-3xs
+            margin-bottom: 0.75rem
+
+        &__title
+            transition: color 100ms ease-in-out
+
+        &__description
+            font-size: $font-xxs
+            margin: 0

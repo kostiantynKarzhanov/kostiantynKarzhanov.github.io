@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+}
+
+:root {
+  --btn-carousel-size: 3rem;
+}
+
+.carousel {
+  margin-bottom: 1rem;
+  display: flex;
+  overflow: hidden;
+}
+
+.box--cards {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 2 * var(--btn-carousel-size));
+  transform: translateX(0);
+  transition: transform 500ms ease-in-out;
+}
+
+.card {
+  padding: 0.25rem;
+  position: relative;
+}
+
+.card > img {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  /* aspect-ratio: 16 / 9; */
+}
+
+.btn-carousel {
+  margin: 0.25rem 0;
+  width: var(--btn-carousel-size);
+  background-color: magenta;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.btn-carousel:active {
+  background-color: lightgreen;
+}
+
+.btn-generate-list {
+  padding: 1.5em;
+  display: block;
+  width: 100%;
+  background-color: lightgreen;
+  cursor: pointer;
+}
+
+.btn-generate-list:active {
+  background-color: rgba(255, 0, 255, 0.5);
+}
+
+.sr-only {
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  /* added line start */
+  white-space: nowrap;
+  /* added line end */
+  border: none;
+}
+
+.selected {
+  border: 2px solid magenta;
+  filter: blur(5px);
+}

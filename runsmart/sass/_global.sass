@@ -1,0 +1,376 @@
+/*	------------------	*/
+/*	resets				*/
+/*	------------------	*/
+/*  https://piccalil.li/blog/a-modern-css-reset/ */
+
+html:focus-within
+	scroll-behavior: smooth
+
+*, *::before, *::after
+	box-sizing: border-box
+
+img
+	display: block
+	max-width: 100%
+
+fieldset
+	margin: 0
+	padding: 0
+	border: 0
+
+p
+	margin: 0
+
+h1,
+h2,
+h3
+	margin: 0
+	font-weight: 500
+
+a,
+a:hover,
+a:visited
+	text-decoration: none
+
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+body
+	margin: 0
+	min-height: 100vh
+	font-family: 'MuseoModerno', cursive
+	font-size: $font-s
+	font-weight: 400
+	line-height: 1.5
+	color: $color-1
+	background-color: $color-2
+	overflow-x: hidden
+
+	&[data-blocked-scroll="true"]
+		overflow: hidden
+
+/* Inherit font-sizes for inputs and buttons */
+
+input,
+button,
+textarea,
+select
+	font: inherit
+
+dialog
+	padding: 0
+	border: 0
+
+/* remove animations for people who've turned them off */
+	
+@media (prefers-reduced-motion: reduce)
+
+	*,
+	*::before,
+	*::after
+		animation-duration: 0.01ms !important
+		animation-iteration-count: 1 !important
+		transition-duration: 0.01ms !important
+		scroll-behavior: auto !important
+
+/*	------------------	*/
+/*	utility classes		*/
+/*	------------------	*/
+
+.d-block
+	display: block
+
+.container
+	margin: 0 auto
+	max-width: 90rem
+
+	&--px
+		padding-right: 1.5rem
+		padding-left: 1.5rem
+
+		@include breakpoint-up(medium)
+			padding-right: 3rem
+			padding-left: 3rem	
+
+		@include breakpoint-up(large)
+			padding-right: 4rem
+			padding-left: 4rem			
+
+	&--pt
+		padding-top: 3rem
+
+		@include breakpoint-up(medium)
+			padding-top: 4rem
+
+		@include breakpoint-up(large)
+			padding-top: 6rem
+
+	&--pb
+		padding-bottom: 3rem
+
+		@include breakpoint-up(medium)
+			padding-bottom: 4rem
+
+		@include breakpoint-up(large)
+			padding-bottom: 6rem
+
+	&--py
+		padding-top: 3rem
+		padding-bottom: 3rem
+
+		@include breakpoint-up(medium)
+			padding-top: 4rem
+			padding-bottom: 4rem
+
+		@include breakpoint-up(large)
+			padding-top: 6rem
+			padding-bottom: 6rem
+.flex
+	display: flex
+
+	&--jc-c
+		justify-content: center
+
+	&--jc-s
+		justify-content: flex-start
+
+	&--jc-e
+		justify-content: flex-end
+
+	&--jc-sb
+		justify-content: space-between
+
+	&--ai-c
+		align-items: center
+
+	&--d-c
+		flex-direction: column
+
+	&--r-gap
+		row-gap: $gap-s
+
+	&--c-gap
+		column-gap: $gap-xl
+
+.grid-container
+	display: grid
+
+	&--jc-c
+		justify-content: center
+
+	&--carousel
+		grid-template-rows: 1fr minmax(1.875rem, 10%)
+
+		@include breakpoint-up(medium)
+			grid-template-columns: minmax(10px, 2.5rem) 1fr minmax(10px, 2.5rem)
+			grid-template-rows: 1fr minmax(1.875rem, 10%)
+
+	&--catalog
+		justify-content: center
+		gap: clamp(0.625rem, 2vw, 2rem)
+
+		@include breakpoint-up(medium)
+			grid-template-columns: repeat(2, minmax(18.75rem, 20rem))
+
+		@include breakpoint-up(large)
+			grid-template-columns: repeat(3, minmax(18.75rem, 20rem))
+
+.client-data-form
+	margin: 0 auto
+	padding: 1rem
+	max-width: 24rem
+
+	@include breakpoint-up(medium)
+		margin: 0
+
+	> p
+		margin-bottom: 2rem
+
+	label
+		display: block
+		margin-bottom: 1rem
+
+		&:last-of-type
+			margin-bottom: 1.25rem
+
+	input
+		padding: 1.25rem 1.25rem
+		display: block
+		line-height: 1
+		width: 100%
+		border: 0
+		border-radius: 5px
+
+	.main-btn
+		width: 100%
+
+.main-btn
+	padding: 0.625rem 1.5625rem
+	display: block
+	cursor: pointer
+	text-align: center
+	text-transform: uppercase
+	color: $color-2
+	background-color: $color-3
+	border: 0
+	border-radius: 0.3125rem
+	transition: opacity 300ms ease-in-out
+
+	&:hover
+		opacity: 0.75
+
+	a
+		display: inline-block
+
+.btn-close-modal
+	padding: 0px 10px
+	aspect-ratio: 1 / 1
+	position: absolute
+	top: -1rem
+	left: -1rem
+	font-size: 1.5rem
+	line-height: 1
+	border-radius: 50%
+	box-shadow: 0 0 1rem $color-5
+
+.btn-back-to-top
+	margin: 0 auto
+	position: fixed
+	right: 0
+	left: 0
+	bottom: 2rem
+	z-index: 2
+	display: block
+	width: 2.5rem
+	height: 2.5rem
+	background-color: $color-3
+	border: 1px solid $color-2
+	border-radius: 50%
+	opacity: 1
+	visibility: visible
+	transition: transform 300ms ease-in-out, opacity 300ms ease-in-out, visibility 300ms ease-in-out
+	cursor: pointer
+
+	@include breakpoint-up(large)
+		margin: 0
+		left: auto
+		right: 3.5rem
+
+	&:hover
+		opacity: 0.75
+		transform: translateY(-20%) scale(1.1)
+
+	img
+		margin: 0 auto
+		width: 100%
+
+.link
+	display: block
+	transition: opacity 300ms ease-in-out
+
+	&:hover
+		opacity: 0.5
+
+.sub-title
+	margin-bottom: 2.5rem
+	text-align: center
+	font-size: clamp(1.25rem, 5vw, $font-large)
+	text-transform: uppercase
+
+	@include breakpoint-up(medium)
+		margin-bottom: 3rem
+
+/*	------------------	*/
+/*	typography			*/
+/*	------------------	*/
+
+.line-through
+	text-decoration: line-through	
+
+.uppercase
+	text-transform: uppercase
+
+.lowercase
+	text-transform: lowercase
+
+.let-sp-xs
+	letter-spacing: $let-sp-xs
+
+/*	------------------	*/
+/*	font color			*/
+/*	------------------	*/
+
+.text-black
+	color: $color-1
+
+.text-white
+	color: $color-2
+
+.text-main
+	color: $color-3
+	
+
+/*	------------------	*/
+/*	font size			*/
+/*	------------------	*/
+
+.font-xs
+	font-size: 0.75rem
+
+.font-s
+	font-size: 1rem
+
+/*	------------------	*/
+/*	visibility			*/
+/*	------------------	*/
+
+*
+	&[data-faded="true"]
+		opacity: 0
+		visibility: hidden
+
+*
+	&[data-hidden="true"]
+		display: none
+
+.sr-only
+	margin: -1px
+	padding: 0
+	position: absolute
+	width: 1px
+	height: 1px
+	overflow: hidden
+	clip: rect(0,0,0,0)
+	/* added line start */
+	white-space: nowrap
+	/* added line end */
+	border: none
+
+.overlap
+	position: absolute
+	z-index: 1
+	width: 100%
+	height: 100%
+	background-color: $color-4
+	visibility: hidden
+
+	&[data-active="true"]
+		visibility: visible
+
+	@include breakpoint-up(medium)
+		display: none
+
+.hidden-mobile
+	@include breakpoint-down(small)
+		display: none
+
+.hidden-mobile-tablet
+	@include breakpoint-down(medium)
+		display: none	
+
+.hidden-tablet-desktop
+	@include breakpoint-up(medium)
+		display: none
+

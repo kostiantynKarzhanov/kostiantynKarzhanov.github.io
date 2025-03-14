@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>survey form</title>
+</head>
+<body>
+    <div class="overlay"></div>
+    <header class="header container container--px">
+        <h1 class="header__title id="title">Survey Form</h1>
+        <p id="description" class="header__text">Thank you for taking the time to help us improve the platform</p>
+    </header>
+    <section class="survey container container--px">
+        <form id="survey-form" action="">
+            <div class="survey__wrapper">
+                <label id="name-label" class="label__hint" for="name">Name</label>
+                <input class="input__text" id="name" type="text" name="user_name" placeholder="Enter your name" required>
+    
+                <label id="email-label" class="label__hint" for="email">Email</label>
+                <input class="input__text" id="email" type="email" name="user_email" placeholder="Enter your Email" required>
+    
+                <label id="number-label" class="label__hint" for="number">Age (optional)</label>
+                <input class="input__text" id="number" type="number" placeholder="Age" name="user_age" min="10" max="99">
+            </div>
+
+            <div class="survey__wrapper">
+                <div class="survey__question">Which option best describes your current role?</div>
+                <select id="dropdown" name="user_role" required>
+                    <option selected disabled value="default value">Select current role</option>
+                    <option value="student">Student</option>
+                    <option value="full time job">Full Time Job</option>
+                    <option value="full time learner">Full Time Learner</option>
+                    <option value="prefer not to say">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="survey__wrapper">
+                <div class="survey__question">Would you recommend freeCodeCamp to a friend?</div>
+
+                <label class="label__radio" for="radio-1"><input class="input__radio" id="radio-1" type="radio" name="recomendation-checker" value="definitely">Definitely</label>
+    
+                <label class="label__radio" for="radio-2"><input class="input__radio" id="radio-2" type="radio" name="recomendation-checker" value="maybe">Maybe</label>
+                
+                <label class="label__radio" for="radio-3"><input class="input__radio" id="radio-3" type="radio" name="recomendation-checker" value="not sure">Not sure</label>
+            </div>
+           
+            <div class="survey__wrapper">
+                <div class="survey__question">What is your favorite feature of freeCodeCamp?</div>
+
+                <select name="favorite_feature" required>
+                    <option selected disabled value="default value">Select an option</option>
+                    <option value="challenges">Challenges</option>
+                    <option value="projects">Projects</option>
+                    <option value="community">Community</option>
+                    <option value="open source">Open Source</option>
+                </select>
+            </div>
+            
+           <div class="survey__wrapper">
+                <div class="survey__question">What would you like to see improved? (Check all that apply)</div>
+
+                <label for="checkbox-1" class="label__checkbox"><input class="input__checkbox" id="checkbox-1" type="checkbox" value="front-end projects">Front-end Projects</label>
+                
+                <label for="checkbox-2" class="label__checkbox"><input class="input__checkbox" id="checkbox-2" type="checkbox" value="back-end projects">Back-end Projects</label>
+
+                <label for="checkbox-3" class="label__checkbox"><input class="input__checkbox" id="checkbox-3" type="checkbox" value="data visualization">Data Visualization</label>
+
+                <label for="checkbox-4" class="label__checkbox"><input class="input__checkbox" id="checkbox-4" type="checkbox" value="challenges">Challenges</label>
+
+                <label for="checkbox-5" class="label__checkbox"><input class="input__checkbox" id="checkbox-5" type="checkbox" value="open source community">Open Source Community</label>
+
+                <label for="checkbox-6" class="label__checkbox"><input class="input__checkbox" id="checkbox-6" type="checkbox" value="gitter help rooms">Gitter help rooms</label>
+
+                <label for="checkbox-7" class="label__checkbox"><input class="input__checkbox" id="checkbox-7" type="checkbox" value="videos">Videos</label>
+
+                <label for="checkbox-8" class="label__checkbox"><input class="input__checkbox" id="checkbox-8" type="checkbox" value="city meetups">City Meetups</label>
+
+                <label for="checkbox-9" class="label__checkbox"><input class="input__checkbox" id="checkbox-9" type="checkbox" value="wiki">Wiki</label>
+
+                <label for="checkbox-10" class="label__checkbox"><input class="input__checkbox" id="checkbox-10" type="checkbox" value="forum">Forum</label>
+
+                <label for="checkbox-11" class="label__checkbox"><input class="input__checkbox" id="checkbox-11" type="checkbox" value="additional courses">Additional Courses</label>
+           </div>
+
+           <div class="survey__question">Any comments or suggestions?</div>
+
+           <div class="survey__wrapper">
+                <textarea class="survey__textarea" name="comment-area" id="comment" cols="30" rows="10" placeholder="Enter your comment here&hellip;"></textarea>
+           </div>
+
+           <button id="submit" class="btn__submit" 
+           type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+</html>

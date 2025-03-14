@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Public Sans';
+    src: url('../fonts/PublicSans-Regular.woff2') format('woff2'),
+        url('../fonts/PublicSans-Regular.woff') format('woff'),
+        url('../fonts/PublicSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('../fonts/PublicSans-Light.woff2') format('woff2'),
+        url('../fonts/PublicSans-Light.woff') format('woff'),
+        url('../fonts/PublicSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('../fonts/PublicSans-Bold.woff2') format('woff2'),
+        url('../fonts/PublicSans-Bold.woff') format('woff'),
+        url('../fonts/PublicSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?z0etwv');
+    src:  url('../fonts/icomoon.eot?z0etwv#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?z0etwv') format('truetype'),
+      url('../fonts/icomoon.woff?z0etwv') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-icon-facebook:before {
+    content: "\e900";
+    color: #fff;
+  }
+  .icon-icon-instagram:before {
+    content: "\e901";
+    color: #fff;
+  }
+  .icon-icon-pinterest:before {
+    content: "\e902";
+    color: #fff;
+  }
+  .icon-icon-twitter:before {
+    content: "\e903";
+    color: #fff;
+  }
+  .icon-icon-youtube:before {
+    content: "\e904";
+    color: #fff;
+  }
+  

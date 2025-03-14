@@ -1,0 +1,30 @@
+.has-fade
+	visibility: hidden
+
+.fade-in
+	animation-name: fade-in
+	animation-duration: 200ms
+	animation-timing-function: ease-in-out
+	animation-fill-mode: forwards
+
+@keyframes fade-in
+	from
+		visibility: hidden
+		opacity: 0
+	to
+		visibility: visible
+		opacity: 1
+
+.fade-out
+	animation-name: fade-out
+	animation-duration: 200ms
+	animation-timing-function: ease-in-out
+	animation-fill-mode: none
+
+@keyframes fade-out
+	from
+		visibility: visible
+		opacity: 1
+	to
+		visibility: hidden
+		opacity: 0

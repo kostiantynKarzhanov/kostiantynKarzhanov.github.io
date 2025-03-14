@@ -1,0 +1,69 @@
+.launch
+	padding-bottom: 5rem
+
+	@include breakpoint-up(medium)
+		padding-bottom: 6rem
+
+	@include breakpoint-up(large)
+		padding-bottom: 6.25rem
+
+		.numbered-title
+			margin-bottom: 1.625rem
+
+	&__picture
+		margin-bottom: 2.125rem
+		grid-area: picture
+
+		@include breakpoint-up(medium)
+			margin-bottom: 3.5rem
+
+		@include breakpoint-up(large)
+			margin-bottom: 0
+			grid-column: span 2
+			justify-self: end
+
+	&__info
+		text-align: center
+		grid-area: launch__info
+
+		@include breakpoint-up(large)
+			padding-right: 1rem
+			padding-left: 5rem
+			justify-self: start
+			text-align: left
+
+		&__title
+			margin-bottom: 0.625rem
+			font-size: $font-3xs
+			letter-spacing: $let-sp-xs
+
+			@include breakpoint-up(medium)
+				font-size: $font-xs
+				letter-spacing: $let-sp-s
+
+			> span
+				display: block
+				font-size: $font-large
+				line-height: 2
+				letter-spacing: normal
+
+				@include breakpoint-up(medium)
+					font-size: $font-3xl
+					line-height: 1.5
+
+				@include breakpoint-up(large)
+					font-size: $font-4xl
+			
+		&__description
+			margin: 0 auto
+			max-width: 48ch
+			font-size: $font-xxs
+
+			@include breakpoint-up(medium)
+				font-size: $font-xs
+
+			@include breakpoint-up(large)
+				margin: 0
+				max-width: 43ch
+				font-size: $font-sm			
+	

@@ -1,0 +1,139 @@
+.survey
+	margin: 0 auto
+	padding: 3.125rem 6.25rem
+	width: 60vw
+	font-size: $font-sm
+	color: $color3
+	background-color: $color5
+
+	@include breakpoint-down(medium)
+		padding: 3.125rem 3.125rem	
+		width: 80vw
+
+	@include breakpoint-down(small)
+		padding: 1.25rem 1.25rem
+		font-size: $font-xs
+		width: 90vw
+
+	&__wrapper
+		margin-bottom: 2rem
+
+	.input
+		&__text
+			display: block
+			width: 100%
+			height: 3.125rem
+			border-radius: 0.5rem
+			font-size: $font-large
+			color: $color1
+			background-color: transparent
+			border: none
+
+			&:not(:last-child)
+				margin-bottom: 2rem
+
+			&:placeholder-shown
+				border: 1px solid $color3
+
+			&::placeholder
+				font-size: $font-med
+				color: $color3
+
+			&:focus
+				outline: 3px solid $color4
+
+			@include breakpoint-down(medium)
+				font-size: $font-med
+
+				&::placeholder
+					font-size: $font-sm
+
+			@include breakpoint-down(small)
+				height: 2rem
+				font-size: $font-sm
+
+				&::placeholder
+					font-size: $font-xs
+
+		&__radio
+			margin-right: 0.5rem
+
+		&__checkbox
+			margin-right: 0.5rem
+    
+	.label
+		&__hint
+			margin-bottom: 0.625rem
+			display: block
+			font-weight: 400
+            
+		&__radio
+			margin-bottom: 0.625rem
+			display: block
+
+		&__checkbox
+			margin-bottom: 0.625rem
+			display: block
+
+	&__question
+		margin-bottom: 1.25rem
+		font-weight: 400
+
+	select
+		width: 100%
+		height: 3.125rem
+		font-size: $font-med
+		color: $color1
+		border: 1px solid $color3 
+		background-color: transparent
+
+		@include breakpoint-down(small)
+			font-size: $font-xs
+
+		option
+			font-size: $font-sm
+			background-color: rgba(89,86,169,0.7)
+
+			@include breakpoint-down(small)
+				font-size: $font-xs
+
+		&:focus
+			outline: 3px solid $color4
+
+	&__textarea
+		width: 100%
+		resize: vertical
+		font-size: $font-large
+		color: $color1
+		background-color: transparent
+		border: 1px solid $color3
+
+		&::placeholder
+			font-size: $font-med
+			color: $color3
+
+		&:focus
+			outline: 3px solid $color4
+
+		@include breakpoint-down(medium)
+			font-size: $font-med
+
+			&::placeholder
+				font-size: $font-sm
+
+		@include breakpoint-down(small)
+			font-size: $font-sm
+
+			&::placeholder
+				font-size: $font-xs
+
+	.btn__submit
+		padding-top: 0.625rem
+		padding-bottom: 0.625rem
+		width: 100%
+		color: $color1
+		background-color: transparent
+		border: 1px solid $color3
+
+		&:hover
+			outline: 3px solid $color4

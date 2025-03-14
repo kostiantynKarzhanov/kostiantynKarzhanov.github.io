@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Room</title>
+</head>
+<body data-blocked-scroll="false">
+  <div class="overlap" data-active="false"></div>
+  <header class="header">
+    
+    <nav class="header__nav container container--px flex flex--ai-c">
+
+      <div id="btn_hamburger" class="header__nav__hamburger hidden-desktop" data-opened="false" aria-expanded="false" aria-controls="main-navigation" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+        <p class="sr-only">Menu</p>
+      </div>
+
+      <div class="header__nav__logo">
+        <a href="index.html">
+          <img src="images/svg/logo.svg" alt="room logo">
+        </a>
+      </div>
+
+      <ul id="main-navigation" class="header__nav__menu underline-indicators flex">
+        <li class="header__nav__menu__item"><a href="#" class="lowercase">Home</a></li>
+        <li class="header__nav__menu__item"><a href="#" class="lowercase">Shop</a></li>
+        <li class="header__nav__menu__item"><a href="#" class="lowercase">About</a></li>
+        <li class="header__nav__menu__item"><a href="#" class="lowercase">Contact</a></li>
+      </ul>
+
+    </nav>
+
+  </header>
+  <main id="main" class="grid-container grid-container--main">
+    <section class="hero grid-container grid-container--hero">
+      <h1 class="sr-only">Room shop</h1>
+
+      <div class="hero__bg-box">
+        <div class="hero__bg-box__picture first-bg" aria-selected="true"></div>
+        <div class="hero__bg-box__picture second-bg" aria-selected="false" data-hidden-bg="true"></div>
+        <div class="hero__bg-box__picture third-bg" aria-selected="false" data-hidden-bg="true"></div>
+      </div>
+
+      <div class="hero__info-box">
+        <div class="hero__info-box-item first-info" aria-selected="true">
+          <h2 class="hero__info-box-item__title text-black">Discover innovative ways to decorate</h2>
+          <p class="hero__info-box-item__description">We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.</p>
+
+          <a href="#" class="shop-link flex flex--ai-c c-gap-xs">
+            <span class="text-black let-sp-s uppercase">Shop now</span>
+            <img class="arrow-click-bait" src="images/svg/icon-arrow.svg" alt="arrow image">
+          </a>
+        </div>
+
+        <div class="hero__info-box-item second-info" aria-selected="false" data-hidden-info="true">
+          <h2 class="hero__info-box-item__title text-black">We are available all across the globe</h2>
+          <p class="hero__info-box-item__description">With stores all over the world, it's easy for you to find furniture for your home or place of business. Locally, we’re in most major cities throughout the country. Find the branch nearest you using our store locator. Any questions? Don't hesitate to contact us today.</p>
+
+          <a href="#" class="shop-link flex flex--ai-c c-gap-xs">
+            <span class="text-black let-sp-s uppercase">Shop now</span>
+            <img class="arrow-click-bait" src="images/svg/icon-arrow.svg" alt="arrow image">
+          </a>
+        </div>
+
+        <div class="hero__info-box-item third-info" aria-selected="false" data-hidden-info="true">
+          <h2 class="hero__info-box-item__title text-black">Manufactured with the best materials</h2>
+          <p class="hero__info-box-item__description">Our modern furniture store provide a high level of quality. Our company has invested in advanced technology to ensure that every product is made as perfect and as consistent as possible. With three decades of experience in this industry, we understand what customers want for their home and office.</p>
+
+          <a href="#" class="shop-link flex flex--ai-c c-gap-xs">
+            <span class="text-black let-sp-s uppercase">Shop now</span>
+            <img class="arrow-click-bait" src="images/svg/icon-arrow.svg" alt="arrow image">
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__slider flex">
+        <button class="hero__slider__btn previous"><span class="sr-only">previous</span></button>
+        <button class="hero__slider__btn next"><span class="sr-only">next</span></button>
+      </div>
+
+    </section>
+    <section class="about grid-container grid-container--about">
+      <div class="about__first-picture"></div>
+      <div class="about__info">
+        <h3 class="about__info__title text-black let-sp-xs uppercase">About our furniture</h3>
+        <p class="about__info__description">
+          Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme that best express your interests and what inspires you. Find the furniture pieces you need, from traditional to contemporary styles or anything in between. Product specialists are available to help you create your dream space.
+        </p>
+      </div>
+      <div class="about__second-picture"></div>
+    </section>
+  </main>
+
+  <script src="js/nav-hamburger.js"></script>
+  <script src="js/slider.js"></script>
+</body>
+</html>

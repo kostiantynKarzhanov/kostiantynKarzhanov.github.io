@@ -1,0 +1,523 @@
+[{
+    "name": {
+        "title": "Mr",
+        "first": "William",
+        "last": "Chen"
+    },
+    "gender": "male",
+    "physical attributes": {
+        "weight": "80 kg",
+        "height": "180 cm",
+        "hair color": "black",
+        "eye color": "brown"
+    },
+    "birthday": "1987-03-12",
+    "address": {
+        "street": "123 Main Street",
+        "city": "Vancouver",
+        "province": "BC",
+        "postal code": "V6B 2T9"
+    },
+    "status": "single",
+    "interests": [
+        "hiking",
+        "photography",
+        "traveling",
+        "reading",
+        "cooking",
+        "yoga"
+    ],
+    "phone": "604-123-4567",
+    "email": "william.chen@example.com"
+},
+{
+    "name": {
+        "title": "Ms",
+        "first": "Olivia",
+        "last": "Singh"
+    },
+    "gender": "female",
+    "physical attributes": {
+        "weight": "58 kg",
+        "height": "165 cm",
+        "hair color": "brown",
+        "eye color": "green"
+    },
+    "birthday": "1980-07-22",
+    "address": {
+        "street": "456 Oak Street",
+        "city": "Toronto",
+        "province": "ON",
+        "postal code": "M6J 2B3"
+    },
+    "status": "single",
+    "interests": [
+        "yoga",
+        "music",
+        "cooking",
+        "hiking",
+        "traveling"
+    ],
+    "phone": "416-555-7890",
+    "email": "olivia.singh@example.com"
+},
+{
+    "name": {
+        "title": "Dr",
+        "first": "Alex",
+        "last": "Zhang"
+    },
+    "gender": "non-binary",
+    "physical attributes": {
+        "weight": "75 kg",
+        "height": "175 cm",
+        "hair color": "blonde",
+        "eye color": "blue"
+    },
+    "birthday": "1975-10-05",
+    "address": {
+        "street": "789 Queen Street",
+        "city": "Montreal",
+        "province": "QC",
+        "postal code": "H3C 3E5"
+    },
+    "status": "divorced",
+    "interests": [
+        "art",
+        "music",
+        "traveling",
+        "hiking",
+        "reading"
+    ],
+    "phone": "514-555-1234",
+    "email": "alex.zhang@example.com"
+},
+{
+    "name": {
+        "title": "Ms",
+        "first": "Avery",
+        "last": "Gagnon"
+    },
+    "gender": "female",
+    "physical attributes": {
+        "height": "165 cm",
+        "weight": "56 kg",
+        "hair color": "blonde",
+        "eye color": "brown"
+    },
+    "birthday": "1967-09-03",
+    "address": {
+        "street": "2701 Fancher Drive",
+        "city": "Regina",
+        "province": "SK",
+        "postal code": "S4P 3Y2"
+    },
+    "status": "single",
+    "interests": [
+        "hiking",
+        "reading",
+        "painting",
+        "cooking",
+        "traveling"
+    ],
+    "phone": "306-555-6847",
+    "email": "avery.gagnon@example.com"
+},
+{
+    "name": {
+        "title": "Mr",
+        "first": "Oscar",
+        "last": "Gagné"
+    },
+    "gender": "male",
+    "physical attributes": {
+        "height": "178 cm",
+        "weight": "80 kg",
+        "hair color": "black",
+        "eye color": "green"
+    },
+    "birthday": "1982-05-17",
+    "address": {
+        "street": "758 Adolphus Street",
+        "city": "Toronto",
+        "province": "ON",
+        "postal code": "M5E 1C2"
+    },
+    "status": "married",
+    "interests": [
+        "football",
+        "video games",
+        "cooking",
+        "traveling",
+        "music"
+    ],
+    "phone": "416-555-1234",
+    "email": "oscar.gagne@example.com"
+},
+{
+    "name": {
+        "title": "Dr",
+        "first": "Aaliyah",
+        "last": "Chowdhury"
+    },
+    "gender": "non-binary",
+    "physical attributes": {
+        "height": "170 cm",
+        "weight": "65 kg",
+        "hair color": "brown",
+        "eye color": "hazel"
+    },
+    "birthday": "1990-12-21",
+    "address": {
+        "street": "2086 Jasper Avenue",
+        "city": "Vancouver",
+        "province": "BC",
+        "postal code": "V6H 3V3"
+    },
+    "status": "divorced",
+    "interests": [
+        "yoga",
+        "reading",
+        "gardening",
+        "photography",
+        "volunteering"
+    ],
+    "phone": "604-555-8765",
+    "email": "aaliyah.chowdhury@example.com"
+},
+{
+    "name": {
+        "title": "Mr",
+        "first": "Aiden",
+        "last": "Nguyen"
+    },
+    "gender": "male",
+    "physical attributes": {
+        "weight": "75 kg",
+        "height": "182 cm",
+        "hair color": "black",
+        "eye color": "brown"
+    },
+    "birthday": "1990-06-17",
+    "address": {
+        "street": "123 Main St",
+        "city": "Vancouver",
+        "province": "BC",
+        "postal code": "V6B 1C9"
+    },
+    "status": "single",
+    "interests": [
+        "hiking",
+        "photography",
+        "reading",
+        "traveling",
+        "cooking"
+    ],
+    "phone": "604-123-4567",
+    "email": "aiden.nguyen@example.com"
+},
+{
+    "name": {
+        "title": "Ms",
+        "first": "Mia",
+        "last": "Sullivan"
+    },
+    "gender": "female",
+    "physical attributes": {
+        "weight": "58 kg",
+        "height": "170 cm",
+        "hair color": "blonde",
+        "eye color": "green"
+    },
+    "birthday": "1979-03-23",
+    "address": {
+        "street": "456 Granville St",
+        "city": "Toronto",
+        "province": "ON",
+        "postal code": "M5H 2M9"
+    },
+    "status": "married",
+    "interests": [
+        "yoga",
+        "dancing",
+        "music",
+        "fashion",
+        "traveling"
+    ],
+    "phone": "416-555-7890",
+    "email": "mia.sullivan@example.com"
+},
+{
+    "name": {
+        "title": "Dr",
+        "first": "James",
+        "last": "Lee"
+    },
+    "gender": "male",
+    "physical attributes": {
+        "weight": "65 kg",
+        "height": "175 cm",
+        "hair color": "purple",
+        "eye color": "blue"
+    },
+    "birthday": "1987-11-11",
+    "address": {
+        "street": "789 Robson St",
+        "city": "Vancouver",
+        "province": "BC",
+        "postal code": "V6Z 2H7"
+    },
+    "status": "divorced",
+    "interests": [
+        "gardening",
+        "baking",
+        "writing",
+        "art",
+        "social justice"
+    ],
+    "phone": "604-223-1237",
+    "email": "lee-james@example.com"
+},
+{
+    "name": {
+        "title": "Ms",
+        "first": "Emily",
+        "last": "Wong"
+    },
+    "gender": "female",
+    "physical attributes": {
+        "weight": "55 kg",
+        "height": "165 cm",
+        "hair color": "brown",
+        "eye color": "green"
+    },
+    "birthday": "1990-09-05",
+    "address": {
+        "street": "456 Oak Street",
+        "city": "Toronto",
+        "province": "ON",
+        "postal code": "M4E 1K6"
+    },
+    "status": "single",
+    "interests": [
+        "yoga",
+        "reading",
+        "hiking",
+        "cooking"
+    ],
+    "phone": "416-555-7890",
+    "email": "emily.wong@example.com"
+},
+{
+    "name": {
+        "title": "Mr",
+        "first": "Raj",
+        "last": "Patel"
+    },
+    "gender": "male",
+    "physical attributes": {
+        "weight": "75 kg",
+        "height": "185 cm",
+        "hair color": "black",
+        "eye color": "brown"
+    },
+    "birthday": "1965-12-01",
+    "address": {
+        "street": "789 Queen Street",
+        "city": "Calgary",
+        "province": "AB",
+        "postal code": "T2P 2S6"
+    },
+    "status": "married",
+    "interests": [
+        "basketball",
+        "movies",
+        "volunteering",
+        "cooking"
+    ],
+    "phone": "403-555-2345",
+    "email": "raj.patel@example.com"
+},
+{
+    "name": {
+        "title": "Ms",
+        "first": "Isabelle",
+        "last": "Lefebvre"
+    },
+    "gender": "female",
+    "physical attributes": {
+        "weight": "60 kg",
+        "height": "170 cm",
+        "hair color": "blonde",
+        "eye color": "blue"
+    },
+    "birthday": "1996-06-18",
+    "address": {
+        "street": "456 Rue Saint-Jacques",
+        "city": "Montreal",
+        "province": "QC",
+        "postal code": "H2Y 1N1"
+    },
+    "status": "divorced",
+    "interests": [
+        "painting",
+        "reading",
+        "hiking",
+        "traveling",
+        "guitar"
+    ],
+    "phone": "514-555-6789",
+    "email": "isabelle.lefebvre@example.com"
+},
+{
+    "name": {
+        "title": "Ms",
+        "first": "Sophie",
+        "last": "Wu"
+    },
+    "gender": "female",
+    "physical attributes": {
+        "weight": "55 kg",
+        "height": "165 cm",
+        "hair color": "brown",
+        "eye color": "brown"
+    },
+    "birthday": "1993-02-22",
+    "address": {
+        "street": "123 Main Street",
+        "city": "Vancouver",
+        "province": "BC",
+        "postal code": "V6A 2T2"
+    },
+    "status": "divorced",
+    "interests": [
+        "yoga",
+        "reading",
+        "hiking",
+        "painting"
+    ],
+    "phone": "604-123-4567",
+    "email": "sophie.wu@example.com"
+},
+{
+    "name": {
+        "title": "Mr",
+        "first": "David",
+        "last": "Lam"
+    },
+    "gender": "male",
+    "physical attributes": {
+        "weight": "70 kg",
+        "height": "180 cm",
+        "hair color": "black",
+        "eye color": "brown"
+    },
+    "birthday": "1971-05-09",
+    "address": {
+        "street": "456 Granville Street",
+        "city": "Vancouver",
+        "province": "BC",
+        "postal code": "V6C 1T2"
+    },
+    "status": "married",
+    "interests": [
+        "football",
+        "movies",
+        "basketball",
+        "reading"
+    ],
+    "phone": "604-555-7890",
+    "email": "david.lam@example.com"
+},
+{
+    "name": {
+        "title": "Mr",
+        "first": "Jordan",
+        "last": "Purple"
+    },
+    "gender": "non-binary",
+    "physical attributes": {
+        "weight": "75 kg",
+        "height": "170 cm",
+        "hair color": "pink",
+        "eye color": "blue"
+    },
+    "birthday": "1992-12-01",
+    "address": {
+        "street": "789 Yonge Street",
+        "city": "Toronto",
+        "province": "ON",
+        "postal code": "M4W 2G8"
+    },
+    "status": "single",
+    "interests": [
+        "music",
+        "video games",
+        "writing",
+        "dancing",
+        "baking",
+        "yoga"
+    ],
+    "phone": "416-555-1234",
+    "email": "jordan.purple@example.com"
+},
+{
+    "name": {
+        "title": "Dr",
+        "first": "Ash",
+        "last": "Sih"
+    },
+    "gender": "female",
+    "physical attributes": {
+        "weight": "65 kg",
+        "height": "175 cm",
+        "hair color": "purple",
+        "eye color": "brown"
+    },
+    "birthday": "1995-06-20",
+    "address": {
+        "street": "456 Queen Street",
+        "city": "Toronto",
+        "province": "ON",
+        "postal code": "M5V 2A9"
+    },
+    "status": "married",
+    "interests": [
+        "reading",
+        "writing",
+        "painting",
+        "guitar"
+    ],
+    "phone": "416-555-5678",
+    "email": "ash.sih@example.com"
+},
+{
+    "name": {
+        "title": "Ms",
+        "first": "Lee",
+        "last": "O'Reilly"
+    },
+    "gender": "female",
+    "physical attributes": {
+        "weight": "55 kg",
+        "height": "170 cm",
+        "hair color": "black",
+        "eye color": "brown"
+    },
+    "birthday": "1993-04-11",
+    "address": {
+        "street": "123 Main Street",
+        "city": "Vancouver",
+        "province": "BC",
+        "postal code": "V6A 2T2"
+    },
+    "status": "married",
+    "interests": [
+        "yoga",
+        "reading",
+        "hiking",
+        "traveling"
+    ],
+    "phone": "604-555-1234",
+    "email": "lee.oreilly@example.com"
+}]

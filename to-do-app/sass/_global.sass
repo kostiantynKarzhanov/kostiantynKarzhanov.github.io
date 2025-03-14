@@ -1,0 +1,249 @@
+/*	------------------	*/
+/*	resets				*/
+/*	------------------	*/
+/*  https://piccalil.li/blog/a-modern-css-reset/ */
+
+
+html:focus-within
+	scroll-behavior: smooth
+
+*, *::before, *::after
+	box-sizing: border-box
+
+img
+	display: block
+	max-width: 100%
+
+fieldset
+	margin: 0
+	padding: 0
+	border: 0
+
+p
+	margin: 0
+
+h1,
+h2,
+h3
+	margin: 0
+	font-weight: 300
+
+a,
+a:hover,
+a:visited
+	text-decoration: none
+
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+body
+	margin: 0
+	min-height: 100vh
+	font-family: 'Lato', sans-serif
+	font-size: $font-s
+	font-weight: 300
+	line-height: 1.5
+	color: $clr-black
+	background-color: $clr-primary
+	overflow-x: hidden
+
+/* Inherit font-sizes for inputs and buttons */
+
+input,
+button,
+textarea,
+select
+	font: inherit
+
+/* remove animations for people who've turned them off */
+	
+@media (prefers-reduced-motion: reduce)
+
+	*,
+	*::before,
+	*::after
+		animation-duration: 0.01ms !important
+		animation-iteration-count: 1 !important
+		transition-duration: 0.01ms !important
+		scroll-behavior: auto !important
+
+/*	------------------	*/
+/*	utility classes		*/
+/*	------------------	*/
+
+.container
+	margin: 0 auto
+	max-width: 90rem
+
+	&--px
+		padding-right: 1.5rem
+		padding-left: 1.5rem
+
+	&--py
+		padding-top: 1.5rem 
+		padding-bottom: 1.5rem 
+
+	&--pt
+		padding-top: 1.5rem
+
+	&--pb
+		padding-bottom: 1.5rem 
+
+.flex
+	display: flex
+
+	&--jc-c
+		justify-content: center
+
+	&--ai-c
+		align-items: center
+
+.grid-container
+	display: grid
+
+	&--main
+		grid-template-columns: 1.5rem 1fr 1.5rem
+		row-gap: 2rem
+
+		@include breakpoint-up(medium)
+			grid-template-columns: minmax(1.5rem, 1fr) minmax(max-content, 12.5rem) minmax(18.75rem, 31.25rem) minmax(1.5rem, 1fr)
+
+.btn-controls-container
+	padding-right: 0.3125rem
+	padding-bottom: 0.3125rem
+	display: flex
+	justify-content: flex-end
+	gap: 0.625rem
+
+.btn-control
+	letter-spacing: 1px
+	color: $clr-black
+	background-color: transparent
+	border: 1px solid $clr-accent
+	border-radius: 5px
+	transform: scale(1)
+	transition: opacity 150ms ease-in-out, transform 150ms ease-in-out, background-color 150ms ease-in-out
+	outline: none
+	cursor: pointer
+
+	@include hover-devices
+		&:hover
+			background-color: $clr-light
+			opacity: 85%
+			transform: scale(1.05)
+
+	&:focus
+		box-shadow: 0px 0px 10px 3px $clr-accent
+
+	&:active
+		background-color: $clr-details
+
+.remove
+	margin-bottom: $space-s
+	padding: 0
+	position: relative
+	font-weight: 400
+	border: 0
+	opacity: 30%
+	transition: opacity 150ms ease-in-out, color 150ms ease-in-out
+
+	&::after
+		content: ""
+		position: absolute
+		left: 0
+		right: 0
+		bottom: -5px
+		height: 2px
+		background-color: $clr-accent
+		transform: scaleX(0)
+		transform-origin: right
+		transition: transform 150ms ease-in-out
+
+	@include hover-devices
+		&:hover
+			color: $clr-accent
+			background-color: transparent
+			opacity: 1
+			transform: scale(1)
+
+	&:focus
+		color: $clr-accent
+		opacity: 1
+		box-shadow: none
+
+		&::after
+			transform-origin: left
+			transform: scaleX(1)
+
+	&:active
+		color: $clr-details
+		font-weight: 300
+		background-color: transparent
+
+.textarea-task
+	padding: 0.625rem
+	width: 100%
+	background-color: transparent
+	border: 0
+	border-bottom: 1px solid $clr-primary
+	outline: none
+	resize: none
+
+	&:focus	
+		border-width: 2px
+		border-color: $clr-accent
+
+		&::placeholder
+			opacity: 0.2
+
+.date-holder
+	padding: 0.3125rem
+	display: block
+	text-align: right
+	font-size: 0.625rem
+	letter-spacing: 1px
+	background-color: $clr-details
+	border-radius: 5px 5px 0 0 
+
+
+/*	------------------	*/
+/*	typography			*/
+/*	------------------	*/
+
+.uppercase
+	text-transform: uppercase
+
+.line-through
+	text-decoration: line-through
+
+/*	------------------	*/
+/*	font color			*/
+/*	------------------	*/
+
+/*	------------------	*/
+/*	font size			*/
+/*	------------------	*/
+
+/*	------------------	*/
+/*	visibility			*/
+/*	------------------	*/
+
+*
+	&[data-hidden="true"]
+		display: none
+
+.sr-only
+	margin: -1px
+	padding: 0
+	position: absolute
+	width: 1px
+	height: 1px
+	overflow: hidden
+	clip: rect(0,0,0,0)
+	/* added line start */
+	white-space: nowrap
+	/* added line end */
+	border: none
+

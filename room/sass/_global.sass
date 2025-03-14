@@ -1,0 +1,236 @@
+/*	------------------	*/
+/*	resets				*/
+/*	------------------	*/
+/*  https://piccalil.li/blog/a-modern-css-reset/ */
+
+
+*, *::before, *::after
+	box-sizing: border-box
+
+img
+	display: block
+	max-width: 100%
+
+p
+	margin: 0
+
+h1,
+h2,
+h3
+	margin: 0
+	font-weight: 600
+
+a,
+a:hover,
+a:visited
+	text-decoration: none
+
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+body
+	margin: 0
+	min-height: 100vh
+	font-family: $ff-sans-normal
+	font-size: $font-s
+	font-weight: 500
+	line-height: 1.5
+	color: $color-1
+	background-color: $color-3
+
+	&[data-blocked-scroll="true"]
+		overflow: hidden
+
+button
+	font-size: inherit
+
+/* remove animations for people who've turned them off */
+	
+@media (prefers-reduced-motion: reduce)
+
+	*,
+	*::before,
+	*::after
+		animation-duration: 0.01ms !important
+		animation-iteration-count: 1 !important
+		transition-duration: 0.01ms !important
+		scroll-behavior: auto !important
+
+/*	------------------	*/
+/*	utility classes		*/
+/*	------------------	*/
+
+.container
+	margin: 0 auto
+	max-width: 90rem
+
+	&--px
+		padding-right: 1.5rem
+		padding-left: 1.5rem
+
+		@include breakpoint-up(large)
+			padding-right: 4rem
+			padding-left: 4rem
+
+.flex
+	display: flex
+
+	&--jc-c
+		justify-content: center
+
+	&--ai-c
+		align-items: center
+
+.grid-container
+	display: grid
+
+	&--main	
+		grid-template-rows: 1.2fr 1fr
+
+		@include breakpoint-up(large)
+			grid-template-rows: 33.4375rem 16.5625rem
+		
+	&--hero
+		grid-template-rows: 1fr 1.3fr
+		grid-template-columns: minmax(1px, 2rem) 1fr minmax(1px, 2rem)
+		grid-template-areas: "picture picture picture" ". info ."
+
+		@include breakpoint-up(medium)		
+			grid-template-columns: minmax(10px, 5rem) 1fr minmax(10px, 5rem)
+
+		@include breakpoint-up(large)
+			grid-template-rows: auto
+			grid-template-columns: 58% minmax(10px, 6.25rem) 1fr minmax(10px, 6.25rem)
+			grid-template-areas: "picture . info ."
+
+	&--about
+		grid-template-columns: minmax(1px, 2rem) 1fr minmax(1px, 2rem)
+		grid-template-areas: "first-picture first-picture first-picture" ". about-info ." "second-picture second-picture second-picture"
+
+		@include breakpoint-up(medium)		
+			grid-template-columns: minmax(10px, 5rem) 1fr minmax(10px, 5rem)
+					
+		@include breakpoint-up(large)
+			grid-template-columns: 30% 40% 30%
+			grid-template-areas: "first-picture about-info second-picture"
+
+.c-gap
+	&-xs
+		column-gap: $gap-xs
+	&-s
+		column-gap: $gap-s
+
+.shop-link
+	font-size: $font-xs
+	font-weight: 600
+	transition: opacity 300ms ease-in-out
+
+	&:hover
+		opacity: 0.7
+
+.underline-indicators
+	@include breakpoint-up(large)
+		> *
+			cursor: pointer
+			position: relative
+
+			&::after
+				content: ''
+				margin: 0 auto
+				display: block
+				position: absolute
+				top: 1.5625rem
+				left: 0
+				right: 0
+				width: 0%
+				height: 2px
+				background-color: $color-3
+				transition: width 350ms ease-in-out
+
+			&:hover,
+			&:focus
+				&::after
+					width: 100%
+
+/*	------------------	*/
+/*	typography			*/
+/*	------------------	*/
+
+.uppercase
+	text-transform: uppercase
+
+.lowercase
+	text-transform: lowercase
+
+.let-sp-xs
+	letter-spacing: $let-sp-xs
+
+.let-sp-s
+	letter-spacing: $let-sp-s
+
+/*	------------------	*/
+/*	font color			*/
+/*	------------------	*/
+
+.text-dark-grey
+	color: $color-1
+
+.text-black
+	color: $color-2
+
+.text-white
+	color: $color-3
+
+.text-v-dark-grey
+	color: $color-4
+
+/*	------------------	*/
+/*	visiability		*/
+/*	------------------	*/
+
+/* *
+	&[data-hidden="true"]
+		display: none */
+
+*
+	&[data-hidden-bg="true"]
+		opacity: 0
+		visibility: hidden
+		transform: translateX(-100%)
+
+	&[data-hidden-info="true"]
+		opacity: 0
+		visibility: hidden
+		transform: translateX(100%)
+
+.sr-only
+	margin: -1px
+	padding: 0
+	position: absolute
+	width: 1px
+	height: 1px
+	overflow: hidden
+	clip: rect(0,0,0,0)
+	/* added line start */
+	white-space: nowrap
+	/* added line end */
+	border: none
+
+.overlap
+	position: absolute
+	z-index: 1
+	width: 100%
+	height: 100%
+	background-color: $color-5
+	visibility: hidden
+
+	&[data-active="true"]
+		visibility: visible
+
+.hidden-desktop
+	@include breakpoint-up(large)
+		display: none
+
+

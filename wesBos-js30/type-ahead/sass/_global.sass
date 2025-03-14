@@ -1,0 +1,131 @@
+/*	------------------	*/
+/*	resets				*/
+/*	------------------	*/
+/*  https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Set core root defaults */
+
+html
+	&:focus-within
+		scroll-behavior: smooth
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after
+	box-sizing: border-box
+
+img
+	display: block
+	max-width: 100%
+
+picture
+	margin: 0
+	display: block
+	max-width: 100%
+
+p
+	margin: 0
+
+h1,
+h2,
+h3
+	margin: 0
+
+a, 
+a:hover,
+a:visited
+	text-decoration: none
+
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+body
+	margin: 0
+	padding: 3rem 0
+	min-height: 100vh
+	font-family: 'Lato', sans-serif
+	line-height: 1.5
+	background-color: hsl(47, 100%, 50%)
+
+/* make form elements easier to work with */
+
+input,
+button,
+textarea,
+select
+	font: inherit
+
+/* remove animations for people who've turned them off */
+
+@media (prefers-reduced-motion: reduce)
+
+	html
+		&:focus-within
+			scroll-behavior: auto
+		
+	*,
+	*::before,
+	*::after
+		animation-duration: 0.01ms !important
+		animation-iteration-count: 1 !important
+		transition-duration: 0.01ms !important
+		scroll-behavior: auto !important
+
+/*	------------------	*/
+/*	utility classes		*/
+/*	------------------	*/
+
+/*	------------------	*/
+/*	elements classes	*/
+/*	------------------	*/
+.search
+	margin: 0 auto
+	max-width: 400px
+	text-align: center
+
+	&__suggestions
+		&-item
+			padding: 1.25rem
+			display: flex
+			justify-content: space-between
+			align-items: center
+			text-transform: capitalize
+			background-color: hsl(0, 0%, 100%)
+			border-bottom: 1px solid hsl(0, 0%, 85%)
+			box-shadow: 0 0 10px hsl(0, 0%, 0%, .2)
+
+			&:nth-child(even)
+				transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001)
+				background: linear-gradient(to bottom, #ffffff 0%,#EFEFEF 100%)
+
+			&:nth-child(odd)
+				transform: perspective(100px) rotateX(-3deg) translateY(3px) scale(1.001)
+				background: linear-gradient(to top, #ffffff 0%,#EFEFEF 100%)
+			
+
+#search-field
+	padding: 1.25rem
+	position: relative
+	left: -10%
+	width: 120%
+	text-align: center
+	font-size: 2rem
+	border: 10px solid hsl(0, 0%, 97%)
+	border-radius: 5px
+	box-shadow: 0 0 5px hsla(0, 0%, 0%, 10%), inset 0 0 10px hsla(0, 0%, 0%, 20%)
+	outline: none
+
+.city-hl
+	background-color: hsl(47, 100%, 50%)
+
+.state-hl
+	background-color: hsl(240, 100%, 50%)
+
+.population
+	font-size: 0.625rem
+
+	

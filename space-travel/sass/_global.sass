@@ -1,0 +1,498 @@
+/*	------------------	*/
+/*	resets				*/
+/*	------------------	*/
+/*  https://piccalil.li/blog/a-modern-css-reset/ */
+
+*, *::before, *::after
+	box-sizing: border-box
+
+img
+	display: block
+	max-width: 100%
+
+picture
+	margin: 0
+	display: block
+	max-width: 100%
+
+p
+	margin: 0
+
+h1,
+h2,
+h3
+	margin: 0
+	font-weight: 400
+
+a, 
+a:hover,
+a:visited
+	text-decoration: none
+
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+body
+	margin: 0
+	min-height: 100vh
+	line-height: 1.5
+	font-size: $font-sm
+	font-family: $ff-sans-normal
+	font-weight: 400
+	color: $color3
+	background-color: $color1
+	background-position: center center
+	background-size: cover 
+	background-repeat: no-repeat
+	overflow-x: hidden
+
+	&[data-blocked-scroll="true"]
+		overflow: hidden	
+
+/* make form elements easier to work with */
+
+button
+	font-size: inherit
+
+/* remove animations for people who've turned them off */
+	
+@media (prefers-reduced-motion: reduce)
+
+	*,
+	*::before,
+	*::after
+		animation-duration: 0.01ms !important
+		animation-iteration-count: 1 !important
+		transition-duration: 0.01ms !important
+		scroll-behavior: auto !important
+
+/*	------------------	*/
+/*	utility classes		*/
+/*	------------------	*/
+
+/* general */
+
+.flex
+	display: flex
+
+	&--jc-c
+		justify-content: center
+
+	&--jc-sb
+		justify-content: space-between
+
+	&--ai-c
+		align-items: center
+
+.container
+	margin: 0 auto
+	max-width: 90rem
+
+	&--px
+		padding-right: 1.5rem 
+		padding-left: 1.5rem
+
+		@include breakpoint-up(medium)
+			padding-right: 2.4375rem
+			padding-left: 2.4375rem
+
+		@include breakpoint-up(large)
+			padding-right: 3.4375rem
+			padding-left: 3.4375rem	
+
+.grid-container
+	display: grid
+	place-items: center
+	grid-template-columns: 1.5rem 1fr 1.5rem
+
+	@include breakpoint-up(medium)
+		grid-template-columns: 2.4375rem 1fr 2.4375rem
+
+	@include breakpoint-up(large)
+		grid-template-columns: 10.3125rem minmax(0, 1.5fr) minmax(0, 1fr) 10.3125rem
+
+	&--pt
+		padding-top: 5.5rem 
+
+		@include breakpoint-up(medium)
+			padding-top: 8.5rem 
+
+		@include breakpoint-up(large)
+			padding-top: 13.25rem
+
+	&--home
+		grid-template-areas: ". space-info ." ". btn-area ."
+
+		@include breakpoint-up(large)
+			grid-template-areas: ". space-info btn-area ."
+
+	&--destination
+		grid-template-areas: ". title ." ". picture ." ". tabs-bar ." ". destination-info ."
+
+		@include breakpoint-up(large)
+			grid-template-areas: ". title title ." ". picture tabs-bar ." ". picture destination-info ."
+
+	&--crew
+		grid-template-areas: ". title ." ". picture ." ". crew-line ." ". dotted-slider ." ". crew-info ."
+
+		@include breakpoint-up(medium)
+			grid-template-areas: ". title ." ". crew-info ." ". dotted-slider ." ". picture ."
+		
+		@include breakpoint-up(large)
+			grid-template-areas: ". title picture ." ". crew-info picture ." ". dotted-slider picture ."
+
+	&--launch
+		grid-template-areas: ". title ." "picture picture picture" ". circled-slider ." ". launch__info ."
+
+		@include breakpoint-up(large)
+			grid-template-columns: 10.3125rem auto minmax(0, 1.5fr) minmax(0, 1fr) 10.3125rem
+			grid-template-areas: ". title title ." ". circled-slider launch__info picture"
+
+.skip-to-content
+	padding: 0.125rem
+	position: absolute
+	top: -100%
+	left: 50%
+	font-size: $font-3xs 
+	color: $color1
+	background-color: $color3
+	transform: translate(-50%)
+	transition: top 300ms ease-in-out, transform 300ms ease-in-out
+
+	&:focus
+		top: 0
+		outline-color: $color2
+
+	@include breakpoint-up(medium)
+		left: 20%
+		font-size: $font-xs 
+		transform: translate(0)
+
+	@include breakpoint-up(large)
+		top: 0
+		left: 0
+		font-size: $font-sm 
+		transform: translateX(-100%)
+
+		&:focus
+			transform: translateX(0)
+
+/* visibillity */
+*
+	&[data-hidden="true"]
+		display: none
+
+.sr-only
+	margin: -1px
+	padding: 0
+	position: absolute
+	width: 1px
+	height: 1px
+	overflow: hidden
+	clip: rect(0,0,0,0)
+	/* added line start */
+	white-space: nowrap
+	/* added line end */
+	border: none
+
+// used only for span in main-navigation
+.hidden-tablet
+	@include breakpoint-up(medium)
+		display: none
+
+	@include breakpoint-up(large)
+		display: inline
+
+.hidden-tablet-desktop
+	@include breakpoint-up(medium)
+		display: none
+
+.hidden-mobile-tablet
+	@include breakpoint-down(medium)
+		display: none
+
+/* background colors */
+
+.bg-dark
+	background-color: $color1
+
+.bg-accent
+	background-color: $color2
+
+.bg-white
+	background-color: $color3
+
+.bg-white-op-04
+	background-color: $color5
+
+/* text colors */
+
+.text-dark
+	color: $color1
+
+.text-accent
+	color: $color2
+
+.text-white
+	color: $color3
+
+.text-white-op-50
+	color: $color6
+
+/*	------------------	*/
+/*	typography			*/
+/*	------------------	*/
+
+.numbered-title
+	margin-bottom: 2rem
+	grid-area: title
+	font-family: $ff-sans-cond
+	font-size: $font-xs
+	letter-spacing: $let-sp-s
+	text-transform: uppercase
+
+	> span
+		margin-right: 1.125rem
+		font-weight: 700
+		color: $color4
+
+	@include breakpoint-up(medium)
+		margin-bottom: 3.75rem
+		place-self: start
+		font-size: $font-med
+		letter-spacing: $let-sp-med
+
+	@include breakpoint-up(large)
+		margin-bottom: 0
+		font-size: $font-xl
+		letter-spacing: $let-sp-large
+		
+.uppercase
+	text-transform: uppercase
+
+/* font-families */
+
+.ff-serif
+	font-family: $ff-serif
+
+.ff-sans-normal
+	font-family: $ff-sans-normal
+
+.ff-sans-cond
+	font-family: $ff-sans-cond
+
+/*	------------------	*/
+/*	components			*/
+/*	------------------	*/
+
+.underline-indicators
+	> *
+		cursor: pointer
+		border: 0
+		border-bottom: 3px solid $color8
+		background-color: transparent
+
+		&:hover,
+		&:focus
+			border-color: $color6
+
+		&[aria-selected="true"],
+		&.active
+			color: $color3
+			border-color: $color3
+
+	&.header__nav__menu
+		@include breakpoint-down(small)
+			> *
+				border: 0
+
+/* sliders */
+
+.dotted-slider
+	margin-bottom: 2rem
+	grid-area: dotted-slider
+
+	@include breakpoint-up(medium)
+		margin-bottom: 2.5rem
+
+	@include breakpoint-up(large)
+		margin-bottom: 5.875rem
+		place-self: start
+
+	> *
+		padding: 0
+		cursor: pointer
+		width: 0.625rem
+		height: 0.625rem
+		border: 0
+		border-radius: 50%
+		background-color: $color7
+
+		@include breakpoint-up(large)
+			width: 0.9375rem
+			height: 0.9375rem
+
+		&:hover,
+		&:focus
+			background-color: $color6
+
+		&[aria-selected="true"]
+			background-color: $color3
+
+		&:not(:last-child)
+			margin-right: 1rem
+
+.circled-slider
+	margin-bottom: 1.625rem
+	grid-area: circled-slider
+	text-align: center
+	font-size: $font-xs
+
+	@include breakpoint-up(medium)
+		margin-bottom: 2.75rem
+		font-size: $font-large
+
+	@include breakpoint-up(large)
+		margin-bottom: 0
+		display: flex
+		flex-flow: column nowrap
+		row-gap: 2rem
+		font-size: $font-xxl
+
+	> *
+		cursor: pointer
+		width: 2.5rem
+		height: 2.5rem
+		border: 1px solid $color7
+		border-radius: 50%
+		background-color: transparent
+
+		@include breakpoint-up(medium)
+			width: 3.75rem
+			height: 3.75rem
+
+		@include breakpoint-up(large)
+			width: 5rem
+			height: 5rem
+
+		&:not(:last-child)
+			margin-right: 1rem
+
+			@include breakpoint-up(large)
+				margin-right: 0
+
+		&:hover,
+		&:focus
+			border-color: $color3
+
+		&[aria-selected="true"]
+			color: $color1
+			background-color: $color3
+			border-color: $color3
+
+/* main button */
+
+.circle-button
+	padding: 0 1.42em
+	position: relative
+	z-index: 1
+	display: inline-flex
+	justify-content: center
+	align-items: center	
+	aspect-ratio: 1
+	border-radius: 50%
+	font-size: $font-med 
+	letter-spacing: 1.25px
+
+	@include breakpoint-up(medium)
+		padding: 0 1.443em
+		font-size: $font-xxl
+		letter-spacing: 2px
+
+	@include breakpoint-up(large)
+		padding: 0 1.943em
+
+	&::before
+		content: ''
+		position: absolute
+		z-index: -1
+		width: 100%
+		height: 100%
+		border-radius: inherit
+		background-color: $color7
+		opacity: 0
+		transition: transform 500ms ease-in-out, opacity 500ms ease-in-out
+
+	&:hover,
+	&:focus
+		&::before
+			transform: scale(1.5)
+			opacity: 0.6
+
+/* overlap for opened hamburger menu */
+
+.overlap
+	position: absolute
+	z-index: 2
+	width: 100%
+	height: 100%
+	visibility: hidden
+
+	&[data-active="true"]
+		visibility: visible
+
+/*	----------------------------------	*/
+/*	page specifics background-image		*/
+/*	----------------------------------	*/
+
+.home__bg
+	background-image: url('../images/home/background-home-mobile.jpg')
+
+	@include breakpoint-up(medium)
+		background-image: url('../images/home/background-home-tablet.jpg')
+
+	@include breakpoint-up(large)
+		background-image: url('../images/home/background-home-desktop.jpg')
+
+.destination__bg
+	background-image: url('../images/destination/background-destination-mobile.jpg')
+
+	@include breakpoint-up(medium)
+		background-image: url('../images/destination/background-destination-tablet.jpg')
+
+	@include breakpoint-up(large)
+		background-image: url('../images/destination/background-destination-desktop.jpg')
+
+.crew__bg
+	position: relative
+
+	&::before
+		content: ''
+		position: absolute
+		z-index: -1
+		width: 100%
+		height: 100%
+		opacity: 0.4
+		background-image: url('../images/crew/background-crew-mobile.jpg')
+		background-position: center top
+		background-size: cover
+		background-repeat: no-repeat
+
+		@include breakpoint-up(medium)
+			background-image: url('../images/crew/background-crew-tablet.jpg')
+	
+		@include breakpoint-up(large)
+			background-image: url('../images/crew/background-crew-desktop.jpg')
+
+.launch__bg
+	background-image: url('../images/launch/background-launch-mobile.jpg')
+
+	@include breakpoint-up(medium)
+		background-image: url('../images/launch/background-launch-tablet.jpg')
+		background-position: center top
+
+	@include breakpoint-up(large)
+		background-image: url('../images/launch/background-launch-desktop.jpg')
+		background-position: left bottom

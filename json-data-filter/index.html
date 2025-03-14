@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript. JSON Data Filter</title>
+</head>
+<body>
+    <main id="main">
+        <div class="container container--pall flow-spacing--l">
+            <h1 class="fw--500 text--accent-8">JSON Data Filter</h1>
+            <form id="filters" class="form-filters container--pall flow-spacing--m">
+                <div class="flow-spacing--xs">
+                    <h2 class="fw--400 text--accent-8">Interests</h2>
+                    <div id="interests" class="interests grid grid-container"></div>
+                </div>
+                <div class="flow-spacing--xs">
+                    <h2 class="fw--400 text--accent-8">Genders</h2>
+                    <div id="genders" class="genders grid grid-container"></div>
+                </div>
+                <div class="flow-spacing--xs">
+                    <h2 class="fw--400 text--accent-8">Status</h2>
+                    <div id="statuses" class="statuses grid grid-container"></div>
+                </div>
+                <div class="flow-spacing--xs">
+                    <h2 class="fw--400 text--accent-8">Age</h2>
+                    <div id="ages" class="ages grid grid-container grid--all-gap"></div>
+                </div>
+            </form>
+            <button id="show-filtered" class="btn cta ff-sans-normal fw--300 fs--xs text--white bg-c--accent-8" type="button">Show filtered data</button>
+            <section id="results" class="ff-sans-cond bg-c--main-content"></section>
+        </div> 
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

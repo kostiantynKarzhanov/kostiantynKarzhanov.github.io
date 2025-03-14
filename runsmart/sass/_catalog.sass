@@ -1,0 +1,129 @@
+.catalog
+	&__tabs-bar
+		margin-bottom: 2rem
+		column-gap: 10px
+		font-size: clamp(0.625rem, 2vw, 1rem)
+		line-height: 1
+
+		@include breakpoint-up(medium)
+			margin-bottom: 3rem		
+
+		&__item
+			padding: 0.3125rem 0.625rem
+			cursor: pointer
+			color: $color-8
+			border-color: $color-4
+			border-radius: 5px
+			background-color: transparent
+			transform: skew(-30deg)
+			transition: box-shadow 300ms ease-in-out
+
+			&:hover
+				box-shadow: 2px 2px 10px $color-3
+
+			@include breakpoint-up(medium)
+				padding: 0.625rem 2rem
+
+			@include breakpoint-up(large)
+				padding: 0.625rem 3.125rem
+
+			> span
+				transform: skew(30deg)
+
+			&[aria-selected="true"]
+				color: $color-2
+				border-color: transparent
+				background-color: $color-3
+
+	&__list
+		&__item
+			margin: 0 auto
+			padding-top: 1rem
+			padding-right: 1rem
+			padding-bottom: 1.5625rem
+			padding-left: 1rem
+			max-width: 20rem
+			border: 2px solid $color-4
+
+			&__wrapper
+				width: 100%
+				overflow-x: hidden
+
+			&__content
+				width: 200%
+				transform: translateX(0)
+				transition: transform 500ms ease-in-out
+
+				&[data-more="true"]
+					transform: translate(-50%)
+
+			&__info
+				width: 50%
+				min-height: 19.5rem
+				text-align: center
+
+				img
+					margin: 0 auto
+					margin-bottom: 1.25rem 
+					max-height: 200px
+
+				&-details
+					padding-top: 0.625rem
+					padding-right: 1rem
+					padding-bottom: 1.25rem
+					padding-left: 1rem
+
+					h3
+						margin-bottom: 0.625rem
+						font-weight: 500
+
+			&__description
+				width: 50%
+
+				&-list
+					margin-bottom: 1.25rem 
+					min-height: 19.5rem
+
+					&-item
+						padding-left: 1rem
+						position: relative
+
+						&:not(:last-child)
+							margin-bottom: 1.25rem
+
+						&::before
+							content: ''
+							display: block
+							position: absolute
+							top: 20%
+							left: 0
+							width: 0.3125rem
+							height: 0.3125rem
+							background-color: $color-3
+
+			&__btn-details
+				margin: 0 auto
+				margin-bottom: 1.25rem
+				display: block
+				color: $color-3
+				line-height: 1
+				text-decoration: underline
+				background-color: transparent
+				border: 0
+				cursor: pointer
+
+			&__line
+				margin: 0 auto
+				margin-bottom: 1.25rem
+				width: 90%
+				height: 1px
+				background-color: $color-4
+				
+			&__buy
+				&-price
+					text-align: left
+					font-size: $font-m
+
+					.old-price
+						color: green
+						font-size: $font-xs

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Space tourism</title>
+</head>
+<body class="destination__bg" data-blocked-scroll="false">
+<a href="#main" class="skip-to-content">Skip to content</a>
+<div class="overlap" data-active="false"></div>
+<header class="header">
+  <nav class="header__nav container container--px flex flex--jc-sb flex--ai-c">
+      <div class="header__nav__logo">
+        <a href="index.html"><img src="images/logo.svg" alt="home-logo"></a>
+      </div>
+
+      <div class="header__nav__line hidden-mobile-tablet"></div>
+    
+      <div id="btn_hamburger" class="header__nav__hamburger hidden-tablet-desktop" tabindex="0" aria-controls="main-navigation" aria-expanded="false" data-opened="false">
+        <span></span>
+        <span></span>
+        <span></span>
+        <p class="sr-only">Menu</p>
+      </div>
+
+      <ul id="main-navigation" data-visible="false" class="header__nav__menu underline-indicators">
+        <li class="header__nav__menu__item"><a href="index.html" class="ff-sans-cond text-white uppercase"><span class="hidden-tablet" aria-hidden="true">00 </span>Home</a></li>
+        <li class="header__nav__menu__item active"><a href="destination.html" class="ff-sans-cond text-white uppercase"><span class="hidden-tablet" aria-hidden="true">01 </span>Destination</a></li>
+        <li class="header__nav__menu__item"><a href="crew.html" class="ff-sans-cond text-white uppercase"><span class="hidden-tablet" aria-hidden="true">02 </span>Crew</a></li>
+        <li class="header__nav__menu__item"><a href="launch.html" class="ff-sans-cond text-white uppercase"><span class="hidden-tablet" aria-hidden="true">03 </span>Technology</a></li>
+      </ul>  
+  </nav>
+</header>
+<main id="main" class="destination container grid-container grid-container--pt grid-container--destination">
+  <h1 class="numbered-title"><span aria-hidden="true">01</span>Pick your destination</h1>
+
+  <picture id="moon-image" class="destination__picture">
+    <source type="image/webp" srcset="images/destination/image-moon.webp">
+    <img src="images/destination/image-moon.png" alt="the Moon">
+  </picture>
+
+  <picture id="mars-image" class="destination__picture" data-hidden="true">
+    <source type="image/webp" srcset="images/destination/image-mars.webp">
+    <img src="images/destination/image-mars.png" alt="the planet Mars">
+  </picture>
+
+  <picture id="europa-image" class="destination__picture" data-hidden="true">
+    <source type="image/webp" srcset="images/destination/image-europa.webp">
+    <img src="images/destination/image-europa.png" alt="the moon Europa">
+  </picture>
+
+  <picture id="titan-image" class="destination__picture" data-hidden="true">
+    <source type="image/webp" srcset="images/destination/image-titan.webp">
+    <img src="images/destination/image-titan.png" alt="the moon Titan">
+  </picture>
+
+  <nav class="destination__tabs-bar underline-indicators flex flex--jc-c" aria-label="destination list" role="tablist">
+      <button class="destination__tabs-bar__item ff-sans-cond text-accent uppercase" aria-selected="true" tabindex="0" aria-controls="moon-tab" data-image="moon-image" role="tab">Moon</button>
+      <button class="destination__tabs-bar__item ff-sans-cond text-accent uppercase" aria-selected="false" tabindex="-1" aria-controls="mars-tab" data-image="mars-image" role="tab">Mars</button>
+      <button class="destination__tabs-bar__item ff-sans-cond text-accent uppercase" aria-selected="false" tabindex="-1" aria-controls="europa-tab" data-image="europa-image" role="tab">Europa</button>
+      <button class="destination__tabs-bar__item ff-sans-cond text-accent uppercase" aria-selected="false" tabindex="-1" aria-controls="titan-tab"data-image="titan-image" role="tab">Titan</button>
+  </nav>
+
+  <article id="moon-tab" class="destination__info" tabindex="0" role="tabpanel">
+    <h2 class="destination__info__title ff-serif uppercase">Moon</h2>
+
+    <p class="destination__info__description">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+
+    <div class="destination__info__line"></div>
+
+    <div class="destination__info__meta">
+        <div>
+            <h3 class="destination__info__meta__title ff-sans-cond uppercase">Avg. distance</h3>
+            <span class="ff-serif uppercase">384,400 km</span>
+        </div>
+
+        <div>
+            <h3 class="destination__info__meta__title ff-sans-cond uppercase">Est. travel time</h3>
+            <span class="ff-serif uppercase">3 days</span>
+        </div>
+    </div>
+  </article>
+
+  <article id="mars-tab" class="destination__info" tabindex="0" data-hidden="true" role="tabpanel">
+    <h2 class="destination__info__title ff-serif uppercase">Mars</h2>
+
+    <p class="destination__info__description">Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!</p>
+
+    <div class="destination__info__line"></div>
+
+    <div class="destination__info__meta">
+        <div>
+            <h3 class="destination__info__meta__title ff-sans-cond uppercase">Avg. distance</h3>
+            <span class="ff-serif uppercase">225 mil. km</span>
+        </div>
+
+        <div>
+            <h3 class="destination__info__meta__title ff-sans-cond uppercase">Est. travel time</h3>
+            <span class="ff-serif uppercase">9 months</span>
+        </div>
+    </div>
+  </article>
+
+  <article id="europa-tab" class="destination__info" tabindex="0" data-hidden="true" role="tabpanel">
+    <h2 class="destination__info__title ff-serif uppercase">Europa</h2>
+
+    <p class="destination__info__description">The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.</p>
+
+    <div class="destination__info__line"></div>
+
+    <div class="destination__info__meta">
+        <div>
+            <h3 class="destination__info__meta__title ff-sans-cond uppercase">Avg. distance</h3>
+            <span class="ff-serif uppercase">628 mil. km</span>
+        </div>
+
+        <div>
+            <h3 class="destination__info__meta__title ff-sans-cond uppercase">Est. travel time</h3>
+            <span class="ff-serif uppercase">3 years</span>
+        </div>
+    </div>
+  </article>
+
+  <article id="titan-tab" class="destination__info" tabindex="0" data-hidden="true" role="tabpanel">
+    <h2 class="destination__info__title ff-serif uppercase">Titan</h2>
+
+    <p class="destination__info__description">The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.</p>
+
+    <div class="destination__info__line"></div>
+
+    <div class="destination__info__meta">
+        <div>
+            <h3 class="destination__info__meta__title ff-sans-cond uppercase">Avg. distance</h3>
+            <span class="ff-serif uppercase">1.6 bil. km</span>
+        </div>
+
+        <div>
+            <h3 class="destination__info__meta__title ff-sans-cond uppercase">Est. travel time</h3>
+            <span class="ff-serif uppercase">7 years</span>
+        </div>
+    </div>
+  </article>
+
+</main>
+<script src="js/nav-hamburger.js"></script>
+<script src="js/nav-tabList.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+/* ------------- */
+/* css-variables */
+/* ------------- */
+:root {
+  /* fonts */
+  --ff-sans-normal: "Poppins", sans-serif;
+
+  /* font-weight */
+  --fw--400: 400;
+  --fw--600: 600;
+
+  /* spacing */
+  --pad-x: 3rem;
+  --pad-y: 3rem;
+  --pad: 1em;
+  --flow-space--xs: 0.625rem;
+  --flow-space--s: 1rem;
+  --flow-space--m: 1.25rem;
+  --gap: 1rem;
+
+  /* colors */
+  --c--black-op: rgba(0, 0, 0, 0.1);
+  --c--accent-1: rgb(255, 208, 0);
+  --c--accent-2: rgb(255, 244, 199);
+  --c--accent-3: rgb(255 199 199);
+  --c--accent-4: rgb(228 255 199);
+  --c--disabled: rgba(239, 239, 239, 0.85);
+
+  /* grid */
+  --grid--col: auto;
+  --grid--row: auto;
+
+  /* border-radius */
+  --radius: 0.5rem;
+}
+
+/* --------------- */
+/* Utility classes */
+/* --------------- */
+.d-block {
+  display: block;
+}
+
+/* grid */
+.grid {
+  display: grid;
+}
+
+.grid-container {
+  grid-template-columns: var(--grid--col);
+  grid-template-rows: var(--grid--row);
+}
+
+.grid--all-gap {
+  gap: var(--gap);
+}
+
+/* flexbox */
+.flex {
+  display: flex;
+}
+
+.flex--jc-sb {
+  justify-content: space-between;
+}
+
+.flex--gap {
+  gap: var(--gap);
+}
+
+/* positioning */
+.p--rel {
+  position: relative;
+}
+
+.p--abs {
+  position: absolute;
+}
+
+/* padding */
+.pad {
+  padding: var(--pad);
+}
+
+/* spacing */
+.flow-spacing--xs > * + * {
+  margin-top: var(--flow-space--xs);
+}
+
+.flow-spacing--s > * + * {
+  margin-top: var(--flow-space--s);
+}
+
+.flow-spacing--m > * + * {
+  margin-top: var(--flow-space--m);
+}
+
+/* typography */
+.text-capital {
+  text-transform: capitalize;
+}
+
+/* font-family */
+.ff-sans-normal {
+  font-family: var(--ff-sans-normal);
+}
+
+/* font weight */
+.fw--400 {
+  font-weight: var(--fw--400);
+}
+
+.fw--600 {
+  font-weight: var(--fw--600);
+}
+
+/* containers */
+.container {
+  margin: 0 auto;
+  max-width: 90rem;
+  border: 1px solid var(--c--accent-1);
+}
+
+.container--px {
+  padding-left: var(--pad-x);
+  padding-right: var(--pad-x);
+}
+
+.container--py {
+  padding-top: var(--pad-y);
+  padding-bottom: var(--pad-y);
+}
+
+/* other */
+.b-radius {
+  border-radius: var(--radius);
+}
+
+.sr-only {
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  /* added line start */
+  white-space: nowrap;
+  /* added line end */
+  border: none;
+}

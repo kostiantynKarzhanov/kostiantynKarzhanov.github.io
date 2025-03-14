@@ -1,0 +1,417 @@
+/* ------------- */
+/* css-variables */
+/* ------------- */
+:root {
+	/* fonts */
+	--ff-sans-normal: "Roboto", sans-serif;
+	--ff-sans-cond: "Roboto Condensed", sans-serif;
+
+	/* font-sizes */
+	--f--xs: 1.25rem;
+	--f--s: 1.5rem;
+	--f--m: 2rem;
+	--f--l: 3rem;
+
+	/* font-weight */
+	--fw--300: 300;
+	--fw--400: 400;
+	--fw--500: 500;
+	--fw--700: 700;
+
+	/* spacing */
+	--pad-x: 3rem;
+	--pad-y: 3rem;
+	--list-pad--left: 3rem;
+	--list-pad--right: 2rem;
+	--gap: 1rem;
+	--flow-space--xs: 0.625rem;
+	--flow-space--s: 1rem;
+	--flow-space--m: 1.25rem;
+	--flow-space--l: 2rem;
+
+	/* colors */
+	--c--black: rgb(0, 0, 0);
+	--c--white: rgb(255, 255, 255);
+	--c--nav-link: rgb(174, 194, 215);
+	--c--accent-1: rgb(144, 211, 234);
+	--c--accent-2: rgb(209, 188, 165);
+	--c--accent-3: rgb(205, 152, 141);
+	--c--accent-4: rgb(255, 236, 204);
+	--c--accent-5: rgb(214, 184, 196);
+	--c--accent-6: rgb(116, 160, 110);
+	--c--accent-7: rgb(229, 157, 35);
+	--c--accent-8: rgb(102, 51, 153);
+	--c--body: var(--c--accent-1);
+	--c--main-content: rgb(248, 248, 255);
+	
+	/* grid */
+	--grid--col: auto;
+	--grid--row: auto;
+
+	/* border-radius */
+	--radius: 10px;
+}
+
+/* --------------- */
+/* reset           */
+/* --------------- */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* set smooth scrolling on focusable elements */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Remove default margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+blockquote {
+	margin: 0;
+}
+
+/* Remove default list styles on ul, ol elements */
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	/* list-style-type: none; */
+}
+
+
+/* Change default body styles */
+body {
+	min-height: 100vh;
+	line-height: 1.5;
+	font-family: var(--ff-sans-normal);
+	font-weight: 300;
+    background-color: var(--c--body);
+}
+
+/* --------------- */
+/* Utility classes */
+/* --------------- */
+
+/* containers */
+.container {
+	margin: 0 auto;
+	max-width: 90rem;
+}
+
+.container--px {
+	padding-left: var(--pad-x);
+	padding-right: var(--pad-x);
+}
+
+.container--py {
+	padding-top: var(--pad-y);
+	padding-bottom: var(--pad-y);
+}
+
+.container--pall {
+	padding: var(--pad-x) var(--pad-y);
+}
+
+/* grid */
+.grid {
+	display: grid;
+}
+
+.grid-container {
+	grid-template-columns: var(--grid--col);
+	grid-template-rows: var(--grid--row);
+}
+
+.grid--all-gap {
+	gap: var(--gap);
+}
+
+.grid--r-gap {
+	row-gap: var(--gap);
+}
+
+/* flexbox */
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex--d-col {
+	flex-direction: column;
+}
+
+.flex--ai-c {
+	align-items: center;
+}
+
+.flex--ai-s {
+	align-items: flex-start;
+}
+
+.flex--ai-e {
+	align-items: flex-end;
+}
+
+.flex--as-c {
+	align-self: center;
+}
+
+.flex--jc-fs {
+	justify-content: flex-start;
+}
+
+.flex--jc-c {
+	justify-content: center;
+}
+
+.flex--jc-ev {
+	justify-content: space-evenly;
+}
+
+.flex--jc-sb {
+	justify-content: space-between;
+}
+
+.flex--gap {
+	gap: var(--gap);
+}
+
+.flex--50 {
+	flex: 1 1 50%;
+}
+
+/* spacing */
+.flow-spacing--xs > * + * {
+	margin-top: var(--flow-space--xs);
+}
+
+.flow-spacing--s > * + * {
+	margin-top: var(--flow-space--s);
+}
+
+.flow-spacing--m > * + * {
+	margin-top: var(--flow-space--m);
+}
+
+.flow-spacing--l > * + * {
+	margin-top: var(--flow-space--l);
+}
+
+/* typography */
+.text-capital {
+	text-transform: capitalize;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.lh--text-size {
+	line-height: 1;
+}
+
+.lh--text-double {
+	line-height: 2;
+}
+
+/* font-family */
+.ff-sans-normal {
+	font-family: var(--ff-sans-normal);
+}
+
+.ff-sans-cond {
+	font-family: var(--ff-sans-cond);
+}
+
+/* font size */
+.fs--xs {
+	font-size: var(--f--xs);
+}
+
+.fs--s {
+	font-size: var(--f--s);
+}
+
+.fs--m {
+	font-size: var(--f--m);
+}
+
+.fs--l {
+	font-size: var(--f--l);
+}
+
+/* font weight */
+.fw--300 {
+	font-weight: var(--fw--300);
+}
+
+.fw--400 {
+	font-weight: var(--fw--400);
+}
+
+.fw--500 {
+	font-weight: var(--fw--500);
+}
+
+.fw--700 {
+	font-weight: var(--fw--700);
+}
+
+/* font color */
+.text--white {
+	color: var(--c--white);
+}
+
+.text--accent-1 {
+	color: var(--c--accent-1);
+}
+
+.text--accent-3 {
+	color: var(--c--accent-3);
+}
+
+.text--accent-6 {
+	color: var(--c--accent-6);
+}
+
+.text--accent-7 {
+	color: var(--c--accent-7);
+}
+
+.text--accent-8 {
+	color: var(--c--accent-8);
+}
+
+/* backgrounds */
+.bg-c--main-content {
+    background-color: var(--c--main-content);
+}
+
+.bg-c--accent-1 {
+    background-color: var(--c--accent-1);
+}
+
+.bg-c--accent-2 {
+    background-color: var(--c--accent-2);
+}
+
+.bg-c--accent-3 {
+    background-color: var(--c--accent-3);
+}
+
+.bg-c--accent-4 {
+    background-color: var(--c--accent-4);
+}
+
+.bg-c--accent-5 {
+    background-color: var(--c--accent-5);
+}
+
+.bg-c--accent-6 {
+    background-color: var(--c--accent-6);
+}
+
+.bg-c--accent-7 {
+    background-color: var(--c--accent-7);
+}
+
+.bg-c--accent-8 {
+    background-color: var(--c--accent-8);
+}
+
+/* --------------- */
+/* Other classes   */
+/* --------------- */
+.form-filters {
+    --pad-x: 2rem;
+	--pad-y: 2rem;
+    border: 1px solid var(--c--accent-8);
+    border-radius: var(--radius);
+}
+
+.interests {
+    --grid--col: repeat(4, 1fr);
+    place-items: start;
+}
+
+.genders {
+    --grid--col: repeat(4, 1fr);
+    place-items: start;
+}
+
+.statuses {
+    --grid--col: repeat(4, 1fr);
+    place-items: start;
+}
+
+.ages {
+	--gap: 2rem;
+    --grid--col: repeat(2, 1fr);
+	place-items: center start;
+}
+
+.ages label, 
+.ages label [type="range"] {
+    width: 100%;
+}
+
+.age-result {
+	--radius: 50%;
+	padding: 1.1em;
+	font-size: 1.125rem;
+	font-weight: 500;
+	color: var(--c--white);
+	background-color: var(--c--accent-3);
+	border: 1px solid var(--c--white);
+	border-radius: var(--radius);
+}
+
+.btn.cta {
+	padding: 1em 2em;
+    width: 100%;
+    letter-spacing: 3px;
+	background-color: var(--c--accent-8);
+	border: 1px solid var(--c--white);
+    border-radius: var(--radius);
+	box-shadow: none;
+	transform: scale(1);
+	transition: transform 200ms ease-in-out, background-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+	cursor: pointer;
+}
+
+.btn.cta:hover {
+	transform: scale(1.01);
+	background-color: var(--c--accent-6);
+	box-shadow: 1px 1px 15px 0px var(--c--accent-6);
+}
+
+.btn.cta:active {
+	background-color: var(--c--accent-3);
+	box-shadow: 1px 1px 15px 0px var(--c--accent-3);
+}
+
+.list-results {
+    padding-top: 2rem;
+	padding-bottom: 2rem;
+	padding-left: var(--list-pad--left);
+	padding-right: var(--list-pad--right);
+    word-spacing: 2px;
+	border: 1px dashed var(--c--accent-8);
+}

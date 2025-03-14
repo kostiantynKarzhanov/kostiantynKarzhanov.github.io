@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Space tourism</title>
+</head>
+<body class="crew__bg" data-blocked-scroll="false">
+<a href="#main" class="skip-to-content">Skip to content</a>
+<div class="overlap" data-active="false"></div>
+<header class="header">
+  <nav class="header__nav container container--px flex flex--jc-sb flex--ai-c">
+      <div class="header__nav__logo">
+        <a href="index.html"><img src="images/logo.svg" alt="home-logo"></a>
+      </div>
+
+      <div class="header__nav__line hidden-mobile-tablet"></div>
+    
+      <div id="btn_hamburger" class="header__nav__hamburger hidden-tablet-desktop" tabindex="0" aria-controls="main-navigation" aria-expanded="false" data-opened="false">
+        <span></span>
+        <span></span>
+        <span></span>
+        <p class="sr-only">Menu</p>
+      </div>
+
+      <ul id="main-navigation" data-visible="false" class="header__nav__menu underline-indicators">
+        <li class="header__nav__menu__item"><a href="index.html" class="ff-sans-cond text-white uppercase"><span class="hidden-tablet" aria-hidden="true">00 </span>Home</a></li>
+        <li class="header__nav__menu__item"><a href="destination.html" class="ff-sans-cond text-white uppercase"><span class="hidden-tablet" aria-hidden="true">01 </span>Destination</a></li>
+        <li class="header__nav__menu__item active"><a href="crew.html" class="ff-sans-cond text-white uppercase"><span class="hidden-tablet" aria-hidden="true">02 </span>Crew</a></li>
+        <li class="header__nav__menu__item"><a href="launch.html" class="ff-sans-cond text-white uppercase"><span class="hidden-tablet" aria-hidden="true">03 </span>Technology</a></li>
+      </ul>
+  </nav>
+</header>
+<main id="main" class="crew container grid-container grid-container--pt grid-container--crew">
+    <h1 class="numbered-title"><span aria-hidden="true">02 </span>Meet your crew</h1>
+
+    <picture id="commander-image" class="crew__picture">
+      <source type="image/webp" srcset="images/crew/image-douglas-hurley.webp">
+      <img src="images/crew/image-douglas-hurley.png" alt="the crew commander">
+    </picture>
+
+    <picture id="mission-specialist-image" class="crew__picture" data-hidden="true">
+      <source type="image/webp" srcset="images/crew/image-mark-shuttleworth.webp">
+      <img src="images/crew/image-mark-shuttleworth.png" alt="the mission specialist">
+    </picture>
+
+    <picture id="pilot-image" class="crew__picture" data-hidden="true">
+      <source type="image/webp" srcset="images/crew/image-victor-glover.webp">
+      <img src="images/crew/image-victor-glover.png" alt="the pilot">
+    </picture>
+
+    <picture id="flight-engineer-image" class="crew__picture" data-hidden="true">
+      <source type="image/webp" srcset="images/crew/image-anousheh-ansari.webp">
+      <img src="images/crew/image-anousheh-ansari.png" alt="the flight engineer">
+    </picture>
+
+    <div class="crew__line hidden-tablet-desktop"></div>
+    
+    <div class="dotted-slider" aria-label="crew team list" role="tablist">
+        <button aria-selected="true" tabindex="0" aria-controls="commander-tab" data-image="commander-image" role="tab"><span class="sr-only">the commander</span></button>
+        <button aria-selected="false" tabindex="-1" aria-controls="mission-specialist-tab" data-image="mission-specialist-image" role="tab"><span class="sr-only">the mission specialist</span></button>
+        <button aria-selected="false" tabindex="-1" aria-controls="pilot-tab" data-image="pilot-image" role="tab"><span class="sr-only">the pilot</span></button>
+        <button aria-selected="false" tabindex="-1" aria-controls="flight-engineer-tab" data-image="flight-engineer-image" role="tab"><span class="sr-only">the flight engineer</span></button>
+    </div>
+
+    <article id="commander-tab" class="crew__info" tabindex="0" role="tabpanel">
+        <h2 class="crew__info__title ff-serif uppercase text-white-op-50">Commander</h2>
+        <span class="crew__info__name ff-serif uppercase">Douglas Hurley</span>
+        <p class="crew__info__description text-accent">Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.</p>
+    </article>
+
+    <article id="mission-specialist-tab" class="crew__info" data-hidden="true" tabindex="0" role="tabpanel">
+        <h2 class="crew__info__title ff-serif uppercase text-white-op-50">Mission Specialist</h2>
+        <span class="crew__info__name ff-serif uppercase">Mark Shuttleworth</span>
+        <p class="crew__info__description text-accent">Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.</p>
+    </article>
+
+    <article id="pilot-tab" class="crew__info" data-hidden="true" tabindex="0" role="tabpanel">
+        <h2 class="crew__info__title ff-serif uppercase text-white-op-50">Pilot</h2>
+        <span class="crew__info__name ff-serif uppercase">Victor Glover</span>
+        <p class="crew__info__description text-accent">Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer.</p>
+    </article>
+
+    <article id="flight-engineer-tab" class="crew__info" data-hidden="true" tabindex="0" role="tabpanel">
+        <h2 class="crew__info__title ff-serif uppercase text-white-op-50">Flight Engineer</h2>
+        <span class="crew__info__name ff-serif uppercase">Anousheh Ansari</span>
+        <p class="crew__info__description text-accent">Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.</p>
+    </article>
+</main>
+<script src="js/nav-hamburger.js"></script>
+<script src="js/nav-tabList.js"></script>
+</body>
+</html>

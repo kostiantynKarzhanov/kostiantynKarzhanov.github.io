@@ -1,0 +1,162 @@
+[
+  {
+    "id": "product-1",
+    "name": "Everest Air",
+    "description": "The purity of Everest's air is a testament to the untouched beauty of nature. Far away from the smog-filled skies of the city, the Everest's peaks offer a sanctuary of clean, unpolluted air. With each deep breath, you can feel the difference. The coolness and clarity of the Everest's air refreshes your lungs, leaving you with a sense of purity and renewal. It's a reminder of the pristine landscapes that still exist, where the air is as pure as the untouched wilderness.",
+    "price": 99999,
+    "discontinued": false,
+    "categories": ["All Air", "Mountain Air"]
+  },
+  {
+    "id": "product-2",
+    "name": "Mount Logan Air",
+    "description": "There's something magical about the purity of Mount Logan's air. It's as if every breath you take is infused with nature's own cleansing power. Far from the hustle and bustle of city life, the air in the Mount Logan is untouched by the pollutants that plague urban areas. Instead, it carries the fragrance of evergreen forests and the coolness of pristine streams. Inhaling this pure Mount Logan's air feels like a reset button for the body and a rejuvenation for the spirit.",
+    "price": 59999,
+    "discontinued": false,
+    "categories": ["All Air", "Mountain Air"]
+  },
+  {
+    "id": "product-3",
+    "name": "Hoverla Air",
+    "description": "The purity of Hoverla's air is like a breath of freshness for the soul. As you ascend the peaks and inhale deeply, you can feel the crispness of the air filling your lungs. Untouched by pollution and urban contaminants, the Hoverla's air is free from impurities, carrying the scents of pine trees and wildflowers. It rejuvenates your senses, clearing your mind and invigorating your body",
+    "price": 69999,
+    "discontinued": false,
+    "categories": ["All Air", "Mountain Air"]
+  },
+  {
+    "id": "product-4",
+    "name": "Shkhara Air",
+    "description": "This air is nature's elixir of purity. The crispness of the Shkhara's air fills your lungs, energizing your body and awakening your senses. It's as if you're breathing in the essence of untouched nature, free from the contaminants that pervade city life. The purity of Shkhara's air is a reminder of the remarkable resilience and beauty of our natural world.",
+    "price": 49999,
+    "discontinued": true,
+    "categories": ["All Air", "Mountain Air"]
+  },
+  {
+    "id": "product-5",
+    "name": "Kangchenjunga Air",
+    "description": "In the mountains, the air is pure and invigorating. Away from the pollutants and congestion of urban areas, the Kangchenjunga's air is a precious gift. It carries the aromas of wildflowers, the earthy scent of moss-covered rocks, and the freshness of flowing streams.",
+    "price": 89999,
+    "discontinued": false,
+    "categories": ["All Air", "Mountain Air"]
+  },
+  {
+    "id": "product-6",
+    "name": "Louise Lake Air",
+    "description": "The freshness of Lake Louise's air is a soothing balm for the senses. As you approach the shoreline, a gentle breeze carries the invigorating scent of water and nature. The air feels cool and crisp, rejuvenating your lungs with each deep breath. The unique blend of moisture and purity creates a refreshing atmosphere that awakens your spirit and transports you to a state of tranquility.",
+    "price": 9999,
+    "discontinued": false,
+    "categories": ["All Air", "Lake Air"]
+  },
+  {
+    "id": "product-7",
+    "name": "Moraine Lake Air",
+    "description": "There's an undeniable freshness in the air when you're near a Moraine's Lake. The gentle breeze whispers across the water, carrying with it the distinct aroma of aquatic plants and minerals. Inhaling deeply, you can feel the coolness of the air entering your lungs, filling you with a sense of rejuvenation. The freshness of lake air is like a natural tonic, reinvigorating your body and providing a moment of pure bliss.",
+    "price": 6999,
+    "discontinued": false,
+    "categories": ["All Air", "Lake Air"]
+  },
+  {
+    "id": "product-8",
+    "name": "Two Jack Lake Air",
+    "description": "Two Jack's Lake air is a breath of fresh air in every sense of the word. As you walk along the shoreline, you can feel the gentle mist on your skin, leaving a refreshing sensation. The air is filled with a subtle hint of algae, mixed with the crispness of the water. Inhaling this freshness, you can't help but feel connected to the natural world around you, as if the lake itself is sharing its vitality with you.",
+    "price": 6999,
+    "discontinued": true,
+    "categories": ["All Air", "Lake Air"]
+  },
+  {
+    "id": "product-9",
+    "name": "Minnewanka Lake Air",
+    "description": "The freshness of Minnewanka's Lake air is an invitation to unwind and embrace the serenity of nature. As you approach a lake, the air becomes infused with a delicate blend of earthiness and water. It's a unique scent that carries the essence of the surrounding flora and the purity of the water. Breathing in the lake air, you can feel a renewed energy flowing through your body, as if the very essence of life is present in every molecule.",
+    "price": 3999,
+    "discontinued": false,
+    "categories": ["All Air", "Lake Air"]
+  },
+  {
+    "id": "product-10",
+    "name": "Maligne Lake Air",
+    "description": "There's something undeniably invigorating about the freshness of Maligne's Lake air. It's as if the breeze carries the secrets of the water, infusing the air with a cool, revitalizing quality. As you take in a deep breath, you can almost taste the hint of minerals and the crispness of the surrounding vegetation. The freshness of lake air revitalizes your senses, awakening a sense of awe and appreciation for the natural beauty that surrounds you.",
+    "price": 4999,
+    "discontinued": false,
+    "categories": ["All Air", "Lake Air"]
+  },
+  {
+    "id": "product-11",
+    "name": "Yosemite Forest Air",
+    "description": "Stepping into a Yosemite's forest, you're immediately greeted by the unmistakable freshness of the air. It's a symphony of scents—earthy moss, woody aromas, and the subtle fragrance of wildflowers. As you breathe in deeply, you can feel the crispness of the air invigorating your lungs. The freshness of Yosemite's air has a transformative power, transporting you to a realm of tranquility and reconnecting you with the raw beauty of nature.",
+    "price": 2999,
+    "discontinued": false,
+    "categories": ["All Air", "Forest Air"]
+  },
+  {
+    "id": "product-12",
+    "name": "Torres del Paine Forest Air",
+    "description": "There's an enchanting quality to the freshness of Torres del Paine's forest air. The moment you enter, you're enveloped by a medley of fragrances that awaken your senses. The sweet aroma of pine needles mixes with the earthy scent of fallen leaves, creating a symphony of natural perfumes. Inhaling deeply, you can almost taste the pureness of the air, as if it's infused with the vitality of the surrounding trees. The freshness of forest air is a testament to the untamed wonders of the wilderness.",
+    "price": 3999,
+    "discontinued": false,
+    "categories": ["All Air", "Forest Air"]
+  },
+  {
+    "id": "product-13",
+    "name": "Plitvice Forest Air",
+    "description": "The freshness of Plitvice's forest air is like a breath of life itself. As you wander through the dense foliage, a cool breeze carries the essence of the forest. It's a scent that is both invigorating and calming, simultaneously awakening your senses and soothing your soul. Inhaling deeply, you can feel the purity of the air cleansing your lungs, revitalizing your spirit, and reminding you of the timeless beauty that resides within nature.",
+    "price": 1999,
+    "discontinued": true,
+    "categories": ["All Air", "Forest Air"]
+  },
+  {
+    "id": "product-14",
+    "name": "Naejangsan Forest Air",
+    "description": "Naejangsan's air holds a unique freshness that is unmatched by any other. With each step, you're immersed in a world of natural scents—damp earth, fragrant flowers, and the subtle sweetness of decaying wood. The air feels cool and invigorating, infusing your every breath with a sense of vitality. The freshness of Naejangsan's forest air rejuvenates your body and mind, allowing you to escape the noise of everyday life and find solace in the peaceful embrace of nature.",
+    "price": 2999,
+    "discontinued": false,
+    "categories": ["All Air", "Forest Air"]
+  },
+  {
+    "id": "product-15",
+    "name": "Banff Forest Air",
+    "description": "Inhaling the freshness of Banff's air is like taking a sip from nature's own elixir. As you venture deeper into the woods, the air becomes cleaner and crisper. It carries with it the soothing aroma of moss-covered stones, the invigorating scent of evergreen trees, and the delicate perfume of wildflowers. With each breath, you can feel the rejuvenating effects of the Banff's air, filling your lungs with pureness and revitalizing your being. The freshness of the Banff's air is a reminder of the incredible resilience and beauty that thrives in the heart of nature.",
+    "price": 8999,
+    "discontinued": false,
+    "categories": ["All Air", "Forest Air"]
+  },
+  {
+    "id": "product-16",
+    "name": "New York City Air",
+    "description": "The scent of New York's air is a captivating blend of diverse aromas that weave together to create a unique olfactory experience. As you walk through bustling streets, you're greeted by the rich fragrance of freshly brewed coffee wafting from cozy cafes, the tantalizing aroma of sizzling street food, and the sweet scent of blooming flowers from urban gardens. Mixed with the subtle hint of exhaust fumes and the crispness of the city breeze, the scent of city air encapsulates the vibrant energy and multicultural tapestry of urban life.",
+    "price": 9199,
+    "discontinued": true,
+    "categories": ["All Air", "City Air"]
+  },
+  {
+    "id": "product-17",
+    "name": "Mumbai City Air",
+    "description": "Mumbai's air carries a distinctive scent that tells stories of bustling activity and endless possibilities. It's a medley of fragrances that evolves as you navigate through different neighborhoods. In one moment, you catch a whiff of freshly printed newspapers, mingling with the earthy aroma of rain-soaked pavements. In another, the air carries the intoxicating scent of perfumes and colognes from fashionable boutiques, blending harmoniously with the subtle notes of asphalt and concrete. The scent of city air is an ever-changing symphony that reflects the dynamic nature of urban environments.",
+    "price": 2399,
+    "discontinued": false,
+    "categories": ["All Air", "City Air"]
+  },
+  {
+    "id": "product-18",
+    "name": "Beijing City Air",
+    "description": "Beijing's air has a distinctive scent that is as diverse as the people who inhabit it. Walking through the city streets, you're enveloped in a tapestry of aromas—spices and herbs wafting from bustling food markets, the earthy fragrance of books and coffee in cozy bookstores, and the invigorating freshness of rain-kissed streets. Mixed with the underlying notes of concrete and steel, the scent of city air creates an atmospheric symphony that evokes a sense of excitement, creativity, and endless exploration.",
+    "price": 2899,
+    "discontinued": false,
+    "categories": ["All Air", "City Air"]
+  },
+  {
+    "id": "product-19",
+    "name": "Istanbul City Air",
+    "description": "The scent of Istanbul's air is a sensory experience that awakens your senses and immerses you in the urban tapestry. It's a fusion of fragrances that intermingle harmoniously to create a unique aroma. From the warm and inviting scent of roasted chestnuts sold by street vendors to the musky fragrance of antique shops filled with vintage treasures, every corner of the city carries its own distinct scent. The city air is alive with the subtle traces of history, the vibrancy of cultural diversity, and the unmistakable energy of human endeavor.",
+    "price": 2599,
+    "discontinued": false,
+    "categories": ["All Air", "City Air"]
+  },
+  {
+    "id": "product-20",
+    "name": "Lviv City Air",
+    "description": "The scent of Lviv's air is a fascinating amalgamation of contrasting elements. It's a mix of warm bakery delights, with the tantalizing smell of freshly baked bread and pastries drifting from busy patisseries. Intertwined with this sweetness is the sharp tang of car exhaust, a reminder of the constant motion and transportation that defines city life. The crispness of the air carries whispers of distant conversations, the aroma of brewing teas and coffees, and the occasional hint of fragrant flowers adorning city parks. The scent of city air is a testament to the vibrant and multifaceted nature of urban landscapes.",
+    "price": 3199,
+    "discontinued": false,
+    "categories": ["All Air", "City Air"]
+  }
+]

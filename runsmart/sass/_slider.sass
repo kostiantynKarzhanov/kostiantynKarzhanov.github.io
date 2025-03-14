@@ -1,0 +1,95 @@
+.slider
+	.carousel
+		margin: 0 auto
+		position: relative
+		width: 80%
+		height: 15.625rem
+
+		@include breakpoint-up(medium)
+			height: 22rem
+
+		@include breakpoint-up(large)
+			height: 25rem
+
+		&__limiter
+			grid-row: 1 / 2
+			overflow-x: hidden
+
+			@include breakpoint-up(medium)
+				grid-column: 2 / 3
+
+		&__list
+			margin: 0 auto
+			position: relative
+			width: 100%
+			height: 100%
+			transition: transform 500ms linear
+
+			&__item
+				display: flex
+				align-items: center
+				justify-content: center
+				position: absolute
+				width: 100%
+				height: 100%
+
+				img
+					margin: 0 auto
+					max-height: 95%
+
+					@include breakpoint-up(medium)
+						max-height: 90%
+
+		&__btn
+			padding: 0.625rem 0.3125rem
+			grid-row: 1 / 2
+			cursor: pointer
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			border: 0
+			background-color: transparent
+
+			img
+				margin: 0 auto
+				width: 40%
+
+				@include breakpoint-up(large)
+					width: 60%
+
+			&-previous
+				left: 0
+
+				@include breakpoint-up(medium)
+					grid-column: 1 / 2
+
+			&-next
+				right: 0
+
+				@include breakpoint-up(medium)
+					grid-column: 3 / 4
+
+		&__nav
+			grid-row: 2 / 3
+			padding: 10px 0	
+			column-gap: 1rem
+
+			@include breakpoint-up(medium)
+				grid-column: 1 / 4
+
+			&__indicator
+				padding: 0
+				cursor: pointer
+				width: 0.625rem
+				height: 0.625rem
+				border: 0
+				border-radius: 50%
+				background-color: $color-9
+
+				@include breakpoint-up(medium)
+					width: 1rem
+					height: 1rem
+
+				&.current-slide
+					background-color: $color-5
+

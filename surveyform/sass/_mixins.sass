@@ -1,0 +1,8 @@
+// mixins, media queries, breakpoints
+
+// 639px, 1023px,
+$breakpoints-down: ("small": "39.9375rem", "medium": "63.9375rem")
+
+@mixin breakpoint-down($size)
+	@media (max-width: map-get($breakpoints-down, $size))
+		@content

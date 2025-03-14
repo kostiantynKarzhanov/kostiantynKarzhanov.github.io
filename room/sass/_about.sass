@@ -1,0 +1,38 @@
+.about
+	grid-row-start: 2
+
+	&__first-picture
+		grid-area: first-picture
+		width: 100%
+		height: 14.875rem
+		background-image: url(../images/image-about-dark.jpg)
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+
+		@include breakpoint-up(large)
+			height: 100%
+		
+	&__info
+		padding-top: 3.375rem
+		padding-bottom: 2.75rem
+		grid-area: about-info
+
+		@include breakpoint-up(large)
+			padding: 3.125rem 2.8125rem
+
+		&__title
+			margin-bottom: 1rem
+			font-size: $font-xs
+
+	&__second-picture
+		grid-area: second-picture
+		width: 100%
+		height: 14.1875rem
+		background-image: url(../images/image-about-light.jpg)
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+
+		@include breakpoint-up(large)
+			height: 100%

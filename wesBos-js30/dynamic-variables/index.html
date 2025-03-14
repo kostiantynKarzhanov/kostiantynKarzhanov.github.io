@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>dynamic variables</title>
+</head>
+<body>
+    <h1 class="main-title uppercase">update css variables with <span class="highlight">js</span></h1>
+    <div class="controls">
+        <label for="spacing">
+            <input id="spacing" type="range" value="30" min="0" max="300" data-value-suffix="px">
+        </label>
+        <label for="blur">
+            <input id="blur" type="range" value="30" min="0" max="100" data-value-suffix="px">
+        </label>
+        <label for="base-color">
+            <input id="base-color" type="color" value="#663399">
+        </label>
+    </div>
+    <img class="main-image" src="images/ducks.jpg" alt="picture of ducks flying">
+    <script src="js/script.js"></script>
+</body>
+</html>

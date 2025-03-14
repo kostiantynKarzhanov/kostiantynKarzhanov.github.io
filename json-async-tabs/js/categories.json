@@ -1,0 +1,22 @@
+[
+  {
+    "id": "categorie-all",
+    "description": "All Air"
+  },
+  {
+    "id": "categorie-1",
+    "description": "Mountain Air"
+  },
+  {
+    "id": "categorie-2",
+    "description": "Lake Air"
+  },
+  {
+    "id": "categorie-3",
+    "description": "Forest Air"
+  },
+  {
+    "id": "categorie-4",
+    "description": "City Air"
+  }
+]

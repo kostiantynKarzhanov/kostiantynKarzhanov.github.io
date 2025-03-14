@@ -1,0 +1,122 @@
+
+/*	------------------	*/
+/*	resets				*/
+/*	------------------	*/
+/*  https://piccalil.li/blog/a-modern-css-reset/ */
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Make images easier to work with */
+img {
+	display: block;
+	max-width: 100%;
+}
+
+picture {
+	margin: 0;
+	display: block;
+	max-width: 100%;
+}
+
+p {
+	margin: 0;
+}
+
+/* Remove default margin */
+h1,
+h2,
+h3 {
+	margin: 0;
+}
+
+a,
+a:hover,
+a:visited {
+	text-decoration: none;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;	
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	font-family: 'Lato', sans-serif;
+	line-height: 1.5;
+	background-color: #f08080;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+	 scroll-behavior: auto;
+	}
+	
+	*,
+	*::before,
+	*::after {
+	  animation-duration: 0.01ms !important;
+	  animation-iteration-count: 1 !important;
+	  transition-duration: 0.01ms !important;
+	  scroll-behavior: auto !important;
+	}
+  }
+
+/*	------------------	*/
+/*		variables		*/
+/*	------------------	*/
+
+:root {
+	--spacing: 1rem;
+	--blur: 10px;
+	--base-color: #663399;
+}
+
+/*	------------------	*/
+/*		work classes	*/
+/*	------------------	*/
+.main-title{
+	text-align: center;
+}
+
+.highlight {
+	color: var(--base-color);
+}
+
+.controls {
+	text-align: center;
+}
+
+.main-image{
+	margin: 0 auto;
+	padding: var(--spacing);
+	width: 50%;
+	filter: blur(var(--blur));
+	background-color: var(--base-color);
+}
+
+/*	------------------	*/
+/*		typography		*/
+/*	------------------	*/
+
+.uppercase {
+	text-transform: uppercase;
+}
+

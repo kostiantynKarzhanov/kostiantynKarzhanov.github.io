@@ -1,0 +1,16 @@
+/* mixins, media queries, breakpoints */
+
+/* breakpoints-up: 640px, 1024px */
+$breakpoints-up: ("medium": 40em,"large": 64em)
+
+/* breakpoints-down: 639px, 1023px */
+$breakpoints-down: ("small": 39.9375em, "medium": 63.9375em)
+
+/* mixins + media queries */
+@mixin breakpoint-up($screen-size)
+	@media (min-width: map-get($breakpoints-up, $screen-size))
+		@content
+
+@mixin breakpoint-down($screen-size)
+	@media (max-width: map-get($breakpoints-down, $screen-size))
+		@content

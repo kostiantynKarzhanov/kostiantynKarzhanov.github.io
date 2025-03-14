@@ -1,0 +1,23 @@
+.task-container
+	grid-column: 2 / 3
+	grid-row: 4 / 5
+
+	@include breakpoint-up(medium)
+		margin-left: $gap-s
+		grid-column: 3 / 4
+		grid-row: 2 / 3
+	
+.actual-container__list,
+.completed-container__list,
+.removed-container__list
+
+	> *
+		&:not(:last-child)
+			margin-bottom: $space-s
+
+.actual-container__item,
+.completed-container__item,
+.removed-container__item
+	background-color: $clr-light
+	border-radius: 5px
+	box-shadow: 1px 1px 3px $clr-black

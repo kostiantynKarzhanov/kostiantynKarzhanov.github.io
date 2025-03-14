@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>to-do-app</title>
+</head>
+<body>
+
+    <main id="main" class="container container--py grid-container grid-container--main">
+
+        <header class="header">
+            <a href="#"><h1 class="header__title uppercase">to<span>do</span></h1></a>
+        </header>
+        
+        <nav class="tabs-bar" role="tablist">
+            <button class="tabs-bar__item uppercase" aria-controls="actual" aria-selected="true" tabindex="0" role="tab">actual</button>
+            <button class="tabs-bar__item uppercase" aria-controls="completed" aria-selected="false" tabindex="-1" role="tab">completed</button>
+            <button class="tabs-bar__item uppercase" aria-controls="removed" aria-selected="false" tabindex="-1" role="tab">removed</button>
+        </nav>
+
+        <form class="new-task-form flex flex--ai-c" action="#">
+            <label for="new-task">
+                <textarea id="new-task" class="new-task-form__input-field textarea-task" aria-label="new task area" placeholder="what do you wanna do?" rows="1" autofocus></textarea>
+            </label>
+            <button id="btn-add" type="submit" class="btn-control add" aria-label="create new task"><img src="images/plus-icon.svg" alt="plus"></button>
+        </form>
+
+        <div class="task-container">
+            <div id="actual" class="actual-container" role="tabpanel">
+                <ul class="actual-container__list" tabindex="0"></ul>
+            </div>
+
+            <div id="completed" class="completed-container" role="tabpanel" data-hidden="true">
+                <ul class="completed-container__list" tabindex="0"></ul>
+            </div>
+
+            <div id="removed" class="removed-container" role="tabpanel" data-hidden="true">
+                <button id="btn-removeAll" class="btn-control remove" data-hidden="true">clear removed list</button>
+                <ul class="removed-container__list" tabindex="0"></ul>
+            </div>
+        </div>  
+
+    </main>
+
+    <script src="js/to-do-tabsbar.js"></script>
+    <script src="js/to-do-logic.js"></script>
+
+</body>
+</html>

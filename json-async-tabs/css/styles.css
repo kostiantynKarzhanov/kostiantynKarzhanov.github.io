@@ -1,0 +1,318 @@
+/* ------------- */
+/* css-variables */
+/* ------------- */
+:root {
+  /* fonts */
+  --ff-sans-normal: "Roboto", sans-serif;
+  --ff-accent: "MuseoModerno", cursive;
+
+  /* font-sizes */
+  --f--l: 3rem;
+  --f--xxl: 7rem;
+
+  /* font-weight */
+  --fw--300: 300;
+  --fw--500: 500;
+
+  /* spacing */
+  --pad-x: 3rem;
+  --pad-y: 3rem;
+  --gap: 1rem;
+  --flow-space--l: 2rem;
+
+  /* colors */
+  --c--black: rgb(0, 0, 0);
+  --c--white: rgb(255, 255, 255);
+  --c--accent-1: rgb(220, 202, 255);
+  --c--accent-2: rgb(255, 184, 169);
+  --c--accent-3: rgb(216, 173, 252);
+  --c--accent-4: rgb(179, 176, 242);
+  --c--accent-5: rgb(184, 255, 232);
+  --c--accent-6: rgb(51, 187, 255, 1);
+  --c--accent-7: rgb(0, 249, 135, 1);
+  --c--accent-8: rgb(198, 245, 255, 1);
+  --c--accent-9: rgba(128, 128, 128, 0.5);
+  --c--body: var(--c--accent-1);
+
+  /* gradient */
+  --c--gradient-1: linear-gradient(
+    0deg,
+    var(--c--accent-5) 0%,
+    var(--c--accent-1) 30%,
+    var(--c--accent-4) 64%,
+    var(--c--accent-8) 100%
+  );
+
+  --c-gradient-2: linear-gradient(
+    90deg,
+    var(--c--accent-6) 0%,
+    var(--c--accent-3) 29%,
+    var(--c--accent-2) 71%,
+    var(--c--accent-7) 100%
+  );
+
+  --c-gradient-3: linear-gradient(
+    270deg,
+    var(--c--accent-6) 0%,
+    var(--c--accent-3) 29%,
+    var(--c--accent-2) 71%,
+    var(--c--accent-7) 100%
+  );
+
+  /* border-radius */
+  --radius: 10px;
+}
+
+/* --------------- */
+/* reset           */
+/* --------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* set smooth scrolling on focusable elements */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Remove default margins */
+body,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+blockquote {
+  margin: 0;
+}
+
+/* Remove default list styles on ul, ol elements */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Change default body styles */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: var(--ff-sans-normal);
+  font-weight: var(--fw--300);
+  background-color: var(--c--body);
+  background-image: var(--c--gradient-1);
+}
+
+/* --------------- */
+/* Utility classes */
+/* --------------- */
+
+/* containers */
+.container {
+  margin: 0 auto;
+  max-width: 90rem;
+}
+
+.container--pall {
+  padding: var(--pad-x) var(--pad-y);
+}
+
+/* flexbox */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex--ai-c {
+  align-items: center;
+}
+
+.flex--jc-c {
+  justify-content: center;
+}
+
+.flex--gap {
+  gap: var(--gap);
+}
+
+/* spacing */
+.flow-spacing--l > * + * {
+  margin-top: var(--flow-space--l);
+}
+
+/* typography */
+.text-center {
+  text-align: center;
+}
+
+.lh--text-size {
+  line-height: 1;
+}
+
+/* font-family */
+.ff-sans-normal {
+  font-family: var(--ff-sans-normal);
+}
+
+.ff-accent {
+  font-family: var(--ff-accent);
+}
+
+/* font size */
+.fs--l {
+  font-size: var(--f--l);
+}
+
+.fs--xxl {
+  font-size: var(--f--xxl);
+}
+
+/* font weight */
+.fw--300 {
+  font-weight: var(--fw--300);
+}
+
+.fw--500 {
+  font-weight: var(--fw--500);
+}
+
+/* font color */
+.text-outline {
+  color: var(--c--white);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.text-gradient {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: var(--c-gradient-2);
+}
+
+/* --------------- */
+/* Other classes   */
+/* --------------- */
+.p-top {
+  padding-top: 7rem;
+}
+
+.title-fancy {
+  position: absolute;
+  top: -2rem;
+  left: 0;
+  right: 0;
+}
+
+#category-menu::after {
+  --m-top: var(--flow-space--l);
+  margin-top: var(--m-top);
+  content: "";
+  display: block;
+  background-image: var(--c-gradient-3);
+  height: 3px;
+}
+
+/* table */
+.table-products {
+  margin: 0 auto;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.table-products tbody tr {
+  background-color: transparent;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.table-products tbody tr:hover {
+  color: var(--c--white);
+  background-color: var(--c--accent-9);
+}
+
+.table-products tbody tr:active {
+  background-color: var(--c--accent-4);
+}
+
+.table-products th,
+.table-products td {
+  padding: 1rem;
+  border: 1px solid var(--c--white);
+}
+
+.table-products td:first-child,
+.table-products td:last-child {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.table-products th:first-child,
+.table-products th:last-child {
+  width: 15%;
+}
+
+.table-products th:nth-child(2) {
+  width: 70%;
+}
+
+/* buttons */
+.btn-tab {
+  padding: 1em 2em;
+  width: 100%;
+  letter-spacing: 1px;
+  border: 1px solid currentColor;
+  border-radius: var(--radius);
+  background-color: var(--c--white);
+  box-shadow: none;
+  transform: scale(1);
+  transition: transform 200ms ease-in-out, background-color 300ms ease-in-out,
+    box-shadow 200ms ease-in-out, color 300ms ease-in-out;
+  cursor: pointer;
+}
+
+[data-active-tab] .btn-tab,
+[data-active-tab] .btn-tab:hover {
+  color: var(--c--white);
+  background-color: var(--c--accent-4);
+  transform: scale(1.01);
+  box-shadow: 1px 1px 15px 0px var(--c--white);
+}
+
+.btn-tab:hover {
+  color: var(--c--accent-2);
+  box-shadow: 1px 1px 15px 0px var(--c--accent-2);
+}
+
+.btn-tab:active {
+  color: var(--c--white);
+  background-color: var(--c--accent-2);
+}

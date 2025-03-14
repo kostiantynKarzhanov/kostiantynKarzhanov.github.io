@@ -1,0 +1,53 @@
+.panel-container
+	width: 100%
+	height: 100vh
+	overflow: hidden
+
+	&__item
+		flex: 1
+		color: lightgreen
+		background-color: hsl(270, 50%, 40%)
+		background-size: cover
+		background-position: center center
+		background-repeat: no-repeat
+		box-shadow: inset 0 0 5px 1px rgba(255, 255, 255, .1)
+		transition: flex 300ms cubic-bezier(0.61,-0.19,0.7,-0.11), font-size 300ms cubic-bezier(0.61,-0.19,0.7,-0.11)
+
+		&-text
+			flex: 1
+			display: flex
+			align-items: center
+
+		& > *:first-child
+			transform: translateY(-100%)
+			transition: transform 300ms cubic-bezier(0.61,-0.19,0.7,-0.11)
+
+		
+		& > *:last-child
+			transform: translateY(100%)
+			transition: transform 300ms cubic-bezier(0.61,-0.19,0.7,-0.11)
+
+		&[data-show-closer=""]
+			flex: 3
+			font-size: 30px
+
+		&[data-show-caption=""]
+			& > *:first-child,
+			& > *:last-child
+				transform: translateY(0%)
+
+.panel-1
+	background-image: url("../images/panel-image(1).jpg")
+
+.panel-2
+	background-image: url("../images/panel-image(2).jpg")
+
+.panel-3
+	background-image: url("../images/panel-image(3).jpg")
+
+.panel-4
+	background-image: url("../images/panel-image(4).jpg")
+
+.panel-5
+	background-image: url("../images/panel-image(5).jpg")
+	

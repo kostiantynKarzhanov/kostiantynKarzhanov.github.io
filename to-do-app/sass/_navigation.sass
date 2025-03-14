@@ -1,0 +1,30 @@
+.tabs-bar
+	grid-column: 2 / 3
+	grid-row: 2 / 3
+		
+	&__item
+		padding-top: 0.3125rem
+		padding-bottom: 0.3125rem
+		display: block
+		width: 100%
+		text-align: right
+		letter-spacing: 5px
+		color: $clr-black
+		background-color: transparent
+		border: 0
+		border-radius: 5px
+		cursor: pointer
+		transition: opacity 150ms ease-in-out, letter-spacing 150ms ease-in-out, background-color 150ms ease-in-out
+
+		@include breakpoint-up(medium)
+			text-align: left
+
+		@include hover-devices
+			&:hover
+				letter-spacing: 7px
+				background-color: $clr-light
+				opacity: 85%
+
+		&[aria-selected="true"]
+			letter-spacing: 7px
+			background-color: $clr-accent

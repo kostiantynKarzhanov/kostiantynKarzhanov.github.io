@@ -1,0 +1,66 @@
+.cta
+	background-color: $color6
+	
+	&__wrapper
+		@include breakpoint-up(large)
+			padding: 0 1.5rem
+			display: flex
+
+	&__image
+		height: 17.5625rem
+		position: relative
+		background-image: url('../images/bg-intro-mobile.svg')
+		background-position: 50% 47%
+		background-size: 100%
+		background-repeat: no-repeat
+
+		@include breakpoint-up(large)
+			flex: 3
+			order: 2
+			height: 41rem
+			background-image: none
+
+		&::before
+			@include breakpoint-up(large)
+				content: ''
+				position: absolute
+				left: 1.6875rem
+				background-image: url('../images/bg-intro-desktop.svg')
+				background-position: 0% 77%
+				background-size: 100%
+				background-repeat: no-repeat
+				width: 175%
+				height: 100%
+
+		&::after
+			content: ''
+			position: absolute
+			background-image: url('../images/image-mockups.png')
+			background-position: 50% 90%
+			background-size: 91%
+			background-repeat: no-repeat
+			width: 100%
+			height: 100%
+
+			@include breakpoint-up(medium)
+				background-position: 50% 55%
+				background-size: 75%
+
+			@include breakpoint-up(large)
+				left: 30%
+				background-position: 0% 100%
+				background-size: 100%
+				height: 125%
+				width: 112%
+			
+	&__textbox
+		padding: 4.375rem 1.5rem
+		text-align: center
+		
+		@include breakpoint-up(large)
+			padding: 0
+			flex: 2
+			order: 1
+			align-self: center
+			text-align: left
+			max-width: 26.875rem

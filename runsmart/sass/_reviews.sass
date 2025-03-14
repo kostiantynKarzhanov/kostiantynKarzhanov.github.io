@@ -1,0 +1,48 @@
+.reviews
+	background-color: $color-7
+
+	&-box
+		> * 
+			&:not(:last-child)
+				margin-bottom: 3rem
+
+				@include breakpoint-up(large)
+					margin-bottom: 4rem
+
+		&__item
+			@include breakpoint-up(medium)
+				display: flex
+				align-items: center
+				justify-content: space-evenly
+
+			img
+				margin: 0 auto
+				margin-bottom: 2rem
+				max-width: 30%
+				border-radius: 50%
+				box-shadow: 3px 3px 10px $color-5
+
+				@include breakpoint-up(medium)
+					margin: 0
+					max-width: 25%
+
+				@include breakpoint-up(large)
+					max-width: 20%
+
+			&-description
+				margin: 0 auto
+				text-align: center
+
+				@include breakpoint-up(medium)
+					margin: 0 
+					padding: 1.875rem
+					text-align: left
+
+				@include breakpoint-up(large)
+					max-width: 75ch
+
+				> span
+					margin-bottom: 1.25rem
+					display: block
+					font-weight: 500
+					font-size: clamp(1.125rem, 5vw, 1.875rem)

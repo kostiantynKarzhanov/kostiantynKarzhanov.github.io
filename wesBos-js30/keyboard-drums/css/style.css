@@ -1,0 +1,195 @@
+/* mixins, breakpoints, media queries */ /*	------------------	*/
+/*	resets				*/
+/*	------------------	*/
+/*  https://piccalil.li/blog/a-modern-css-reset/ */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  background-image: url(../images/drums.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+/* Inherit font-sizes for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*	------------------	*/
+/*	utility classes		*/
+/*	------------------	*/
+.container {
+  margin: 0 auto;
+  max-width: 90rem;
+}
+.container--px {
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.container--py {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 0.625rem;
+}
+.flex--jc-c {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.flex--ai-c {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.flex--jc-sp-e {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.d-block {
+  display: block;
+}
+
+/* visibillity */
+*[data-hidden=true] {
+  display: none;
+}
+
+.sr-only {
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  /* added line start */
+  white-space: nowrap;
+  /* added line end */
+  border: none;
+}
+
+/* components */
+#main {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.key {
+  padding: 0;
+  width: 4rem;
+  height: 4rem;
+  color: hsl(0deg, 0%, 0%);
+  font-size: 1rem;
+  background-color: hsla(60deg, 92%, 71%, 0.6);
+  border: 1px solid hsl(38deg, 100%, 66%);
+  border-radius: 5px;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+  outline: none;
+}
+.key > span {
+  font-size: 0.625rem;
+  letter-spacing: 1px;
+}
+@media (hover: hover) {
+  .key:hover {
+    background-color: hsla(60deg, 92%, 71%, 0.75);
+  }
+}
+.key:focus {
+  color: hsl(270deg, 50%, 40%);
+  -webkit-box-shadow: 0px 0px 20px 3px hsl(270deg, 50%, 40%);
+          box-shadow: 0px 0px 20px 3px hsl(270deg, 50%, 40%);
+}
+.key[data-playing=true] {
+  font-weight: 700;
+  border-width: 2px;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+/*	------------------	*/
+/*	typography			*/
+/*	------------------	*/
+.uppercase {
+  text-transform: uppercase;
+}/*# sourceMappingURL=style.css.map */

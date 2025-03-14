@@ -1,0 +1,76 @@
+/*	------------------	*/
+/*	resets				*/
+/*	------------------	*/
+/*  https://piccalil.li/blog/a-modern-css-reset/ */
+
+*, 
+*::before, 
+*::after
+	box-sizing: border-box
+
+img
+	display: block
+	max-width: 100%
+
+picture
+	margin: 0
+	display: block
+	max-width: 100%
+
+p
+	margin: 0
+
+h1,
+h2,
+h3
+	margin: 0
+	font-weight: 400
+
+a, 
+a:hover,
+a:visited
+	text-decoration: none
+
+ul
+	margin: 0
+	padding: 0
+	list-style-type: none
+
+body
+	margin: 0
+	min-height: 100vh
+	line-height: 1.5
+	font-weight: 400
+
+/* make form elements easier to work with */
+
+button
+	font-size: inherit
+
+/* remove animations for people who've turned them off */
+
+@media (prefers-reduced-motion: reduce)
+
+	*,
+	*::before,
+	*::after
+		animation-duration: 0.01ms !important
+		animation-iteration-count: 1 !important
+		transition-duration: 0.01ms !important
+		scroll-behavior: auto !important
+
+/*	------------------	*/
+/*	utility classes		*/
+/*	------------------	*/
+
+.flex
+	display: flex
+
+	&--jc-c
+		justify-content: center
+
+	&--ai-c
+		align-items: center
+
+	&--d-column
+		flex-direction: column

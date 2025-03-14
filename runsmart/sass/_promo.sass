@@ -1,0 +1,40 @@
+.promo
+	padding-top: 10.3125rem
+	background-image: url(../images/background-image.jpg)
+	background-size: cover
+	background-position: left center
+	background-repeat: no-repeat
+
+	&__title
+		margin-bottom: 3.75rem
+		text-align: right
+		font-size: clamp(1.25rem,5vw,2.5rem)
+
+	&__advantage-box
+		margin-bottom: 3.75rem
+		column-gap: clamp(2rem, 7vw, 5rem)
+		font-size: clamp(0.75rem, 3vw, 1rem)
+
+		&__item
+			text-align: center
+			max-width: 12ch
+
+			img
+				margin: 0 auto
+				margin-bottom: 1.25rem
+
+			&:nth-child(1)
+				margin-left: auto
+
+	.link-to-consultation-form
+		margin-left: auto
+		margin-bottom: 1rem
+		max-width: 15.0625rem
+
+	&__call-to-action
+		text-align: right
+
+		.link
+			padding-bottom: 2px
+			display: inline-block
+			border-bottom: 1px solid $color-2

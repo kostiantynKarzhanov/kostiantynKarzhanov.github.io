@@ -1,0 +1,46 @@
+.our-care
+	background-color: $color-7
+
+	&__box
+		@include breakpoint-up(large)
+			display: flex
+			justify-content: space-between
+
+		&__item
+			text-align: center
+
+			&:not(:last-child)
+				margin-bottom: 2rem
+
+				@include breakpoint-up(medium)
+					margin-bottom: 2.5rem
+
+				@include breakpoint-up(large)
+					margin-bottom: 0
+
+			img
+				margin: 0 auto
+				margin-bottom: 1.25rem
+
+				@include breakpoint-up(medium)
+					margin-bottom: 2rem
+
+				@include breakpoint-up(large)
+					margin-bottom: 2.5rem
+
+			&__description
+				margin: 0 auto
+				padding-right: 0.625rem
+				padding-left: 0.625rem
+				max-width: 45ch
+
+				@include breakpoint-up(large)
+					max-width: 36ch
+
+				&-title
+					margin-bottom: 1rem
+					font-size: clamp(1.125rem, 1.5vw, 1.25rem)
+
+					@include breakpoint-up(medium)
+						margin-bottom: 1.875rem
+				

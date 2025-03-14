@@ -1,0 +1,42 @@
+.btn-container {
+  --grid--col: 1fr 1fr;
+  top: 0;
+  right: 0;
+}
+
+#btn--submit {
+  --pad: 0.5em;
+  padding: var(--pad);
+  width: 100%;
+}
+
+#btn--submit,
+#btn--edit,
+#btn--delete {
+  border: 1px solid var(--c--disabled);
+}
+
+#btn--edit,
+#btn--delete {
+  --pad: 0.5em;
+  padding-block: var(--pad);
+  padding-inline: calc(var(--pad) + 0.5em);
+}
+
+#btn--submit,
+#btn--edit.btn--active {
+  background-color: var(--c--accent-4);
+}
+
+#btn--submit[disabled],
+#btn--edit.btn--active[disabled] {
+  background-color: var(--c--disabled);
+}
+
+#btn--edit {
+  background-color: var(--c--accent-2);
+}
+
+#btn--delete {
+  background-color: var(--c--accent-3);
+}

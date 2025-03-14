@@ -1,0 +1,150 @@
+/*	------------------	*/
+/*	resets				*/
+/*	------------------	*/
+/*  https://piccalil.li/blog/a-modern-css-reset/ */
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+picture {
+  margin: 0;
+  display: block;
+  max-width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+body {
+  margin: 0;
+  padding: 3rem 0;
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+  background-color: hsl(47deg, 100%, 50%);
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*	------------------	*/
+/*	utility classes		*/
+/*	------------------	*/
+/*	------------------	*/
+/*	elements classes	*/
+/*	------------------	*/
+.search {
+  margin: 0 auto;
+  max-width: 400px;
+  text-align: center;
+}
+.search__suggestions-item {
+  padding: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: capitalize;
+  background-color: hsl(0deg, 0%, 100%);
+  border-bottom: 1px solid hsl(0deg, 0%, 85%);
+  -webkit-box-shadow: 0 0 10px hsla(0deg, 0%, 0%, 0.2);
+          box-shadow: 0 0 10px hsla(0deg, 0%, 0%, 0.2);
+}
+.search__suggestions-item:nth-child(even) {
+  -webkit-transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+          transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#EFEFEF));
+  background: linear-gradient(to bottom, #ffffff 0%, #EFEFEF 100%);
+}
+.search__suggestions-item:nth-child(odd) {
+  -webkit-transform: perspective(100px) rotateX(-3deg) translateY(3px) scale(1.001);
+          transform: perspective(100px) rotateX(-3deg) translateY(3px) scale(1.001);
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#EFEFEF));
+  background: linear-gradient(to top, #ffffff 0%, #EFEFEF 100%);
+}
+
+#search-field {
+  padding: 1.25rem;
+  position: relative;
+  left: -10%;
+  width: 120%;
+  text-align: center;
+  font-size: 2rem;
+  border: 10px solid hsl(0deg, 0%, 97%);
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px hsla(0deg, 0%, 0%, 0.1), inset 0 0 10px hsla(0deg, 0%, 0%, 0.2);
+          box-shadow: 0 0 5px hsla(0deg, 0%, 0%, 0.1), inset 0 0 10px hsla(0deg, 0%, 0%, 0.2);
+  outline: none;
+}
+
+.city-hl {
+  background-color: hsl(47deg, 100%, 50%);
+}
+
+.state-hl {
+  background-color: hsl(240deg, 100%, 50%);
+}
+
+.population {
+  font-size: 0.625rem;
+}/*# sourceMappingURL=style.css.map */

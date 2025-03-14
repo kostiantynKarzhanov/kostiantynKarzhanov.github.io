@@ -1,0 +1,57 @@
+.features
+	background-color: $color5
+	text-align: center
+
+	@include breakpoint-up(large)
+		text-align: left
+
+	&__intro
+		margin-bottom: 3.75rem
+
+		@include breakpoint-up(large)
+			margin-bottom: 4.75rem
+			width: 60%
+
+	&__box
+		@include breakpoint-up(medium)
+			display: flex
+			row-gap: 2.1875rem
+			flex-wrap: wrap
+			justify-content: space-around
+
+		@include breakpoint-up(large)
+			justify-content: space-between
+
+	&__item
+		&:not(:last-child)
+			margin-bottom: 2.1875rem
+
+			@include breakpoint-up(medium)
+				margin-bottom: 0
+
+		@include breakpoint-up(medium)
+			width: 45%
+
+		@include breakpoint-up(large)
+			width: 23%
+
+		&__icon
+			margin-bottom: 1.875rem
+
+			@include breakpoint-up(large)
+				margin-bottom: 2.8125rem
+			
+		&__title
+			margin-bottom: 1.25rem
+			font-size: $font-med
+			color: $color1
+
+			@include breakpoint-up(large)
+				margin-bottom: 2rem
+				font-size: 1.375rem
+		
+		> p
+			margin-bottom: 0
+
+			@include breakpoint-up(large)
+				font-size: $font-sm
